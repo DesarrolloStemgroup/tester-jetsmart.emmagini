@@ -22,10 +22,6 @@ export default function Page({
 	const { landing } = useDataContext();
 	const router = useRouter();
 
-	if (!landing || landing.length === 0) {
-		return <div className="mt-20 text-black">Cargando...</div>;
-	}
-
 	const landingData = useMemo(() => landing?.[0], [landing]);
 
 	const product = useMemo(
@@ -78,6 +74,10 @@ export default function Page({
 		router.push(`/${idProducto}`);
 	};
 
+	if (!landing || landing.length === 0) {
+		return <div className="mt-20 text-black">Cargando...</div>;
+	}
+
 	return (
 		<>
 			<NavBar logo={logo} />
@@ -115,6 +115,7 @@ export default function Page({
 								{/*// @ts-ignore*/}
 								{relatedProducts.map((relatedProduct) => (
 									<WhileTap>
+										key={relatedProduct.id}
 										<div className="flex justify-center">
 											<CardHome
 												key={relatedProduct.id}
