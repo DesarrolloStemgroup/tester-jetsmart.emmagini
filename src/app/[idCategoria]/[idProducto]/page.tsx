@@ -114,8 +114,7 @@ export default function Page({
 							<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
 								{/*// @ts-ignore*/}
 								{relatedProducts.map((relatedProduct, index) => (
-									<WhileTap>
-										key={index}
+									<WhileTap key={index}>
 										<div className="flex justify-center">
 											<CardHome
 												text={relatedProduct.titulo}
