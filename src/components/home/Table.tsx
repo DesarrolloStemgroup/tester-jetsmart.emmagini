@@ -32,10 +32,9 @@ function Table() {
 			<div className="grid grid-cols-2 sm:grid-cols- md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4">
 				{/*// @ts-ignore */}
 				{categorias.map((categoria) => (
-					<WhileTap>
+					<WhileTap key={categoria.id}>
 						<div className="flex justify-center">
 							<CardHome
-								key={categoria.id}
 								text={categoria.titulo}
 								imageCard={
 									fixImageUrl(categoria.imagen_1) ||
