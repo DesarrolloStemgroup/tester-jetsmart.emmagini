@@ -91,7 +91,7 @@ export default function Page({
 						<Carousel>
 							{imageUrls.map((url, index) => (
 								<Image
-									key={index}
+									key={url}
 									src={fixImageUrl(url)}
 									alt={`product image ${index}`}
 									className="w-full h-auto object-cover"
@@ -113,12 +113,11 @@ export default function Page({
 						<div className="flex flex-col px-4 sm:px-6 lg:px-8 py-8 p-10 mb-32">
 							<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
 								{/*// @ts-ignore*/}
-								{relatedProducts.map((relatedProduct) => (
+								{relatedProducts.map((relatedProduct, index) => (
 									<WhileTap>
-										key={relatedProduct.id}
+										key={index}
 										<div className="flex justify-center">
 											<CardHome
-												key={relatedProduct.id}
 												text={relatedProduct.titulo}
 												imageCard={
 													fixImageUrl(relatedProduct.imagen_1) ||
