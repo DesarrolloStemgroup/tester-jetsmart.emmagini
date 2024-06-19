@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import Banderas from "./extras/Banderas";
 
 const NavBar = ({ logo }) => {
 	return (
@@ -10,11 +11,12 @@ const NavBar = ({ logo }) => {
 				<li className="font-semibold text-lg text-white">
 					<Link href="/">
 						<div className="w-[123px] h-[80px]">
-							<Image src={logo} />
+							<Image src={logo} width={123} height={123} alt="logo" />
 						</div>
 					</Link>
 				</li>
 			</ul>
+			<Banderas />
 		</div>
 	);
 };

@@ -1,10 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
 import NavBar from "@/components/NavBar";
-import CardHome from "../../components/cards/CardHome";
+import CardHome from "@/components/cards/CardHome";
 import { useDataContext } from "@/context/DataProvider";
-import WhileTap from "../../components/animations/WhileTap";
-import logo from "../../../public/assets/logo.png";
+import WhileTap from "@/components/animations/WhileTap";
 
 interface ComponentProps {
 	params: {
@@ -13,7 +12,7 @@ interface ComponentProps {
 }
 
 export default function Page({ params: { idCategoria } }: ComponentProps) {
-	const { landing } = useDataContext();
+	const { landing, empresa } = useDataContext();
 	const router = useRouter();
 
 	if (!landing || landing.length === 0) {
@@ -38,7 +37,7 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 
 	return (
 		<>
-			<NavBar logo={logo} />
+			<NavBar logo={empresa.logo} />
 			<div className="mt-20 container mx-auto px-4 sm:px-6 lg:px-8 py-8 p-10 mb-32">
 				<div className="grid grid-cols-2 sm:grid-cols- md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-6">
 					{/*// @ts-ignore */}

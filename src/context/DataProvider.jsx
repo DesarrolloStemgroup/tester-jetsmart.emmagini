@@ -15,14 +15,21 @@ export const DataProvider = ({ children }) => {
 	const [data, setData] = useState();
 	const [empresa, setEmpresa] = useState();
 	const [landing, setLanding] = useState();
+	const [language, setLanguage] = useState();
 
 	const getAppData = useCallback(async () => {
+		const isEsLa = language === "es-la";
+		const callbackUrl = isEsLa
+			? "https://demo5.emmagini.com/landing.php#"
+			: "https://demo6.emmagini.com/landing.php#";
+		const hostUrl = isEsLa ? "demo5.emmagini.com" : "demo6.emmagini.com";
+
 		try {
 			const response = await axios.post(
 				"https://backend.emmagini.com/api2/pulldata",
 				{
-					callback: "https://demo6.emmagini.com/landing.php#",
-					host: "demo6.emmagini.com",
+					callback: callbackUrl,
+					host: hostUrl,
 					lang: "es",
 				},
 				{
@@ -42,16 +49,18 @@ export const DataProvider = ({ children }) => {
 
 			throw error;
 		}
-	}, []);
+	}, [language]);
 
 	useEffect(() => {
 		getAppData();
 	}, [getAppData]);
 
 	useEffect(() => {
-		console.log("data", data);
-		console.log("empresa", empresa);
-	}, [data]);
+		console.log("lenguaje", language);
+	}, [language]);
+
+	/*console.log("data", data);
+		console.log("empresa", empresa);*/
 
 	return (
 		<DataContext.Provider
@@ -62,6 +71,8 @@ export const DataProvider = ({ children }) => {
 				setEmpresa,
 				landing,
 				setLanding,
+				language,
+				setLanguage,
 			}}
 		>
 			{children}

@@ -19,7 +19,7 @@ interface ComponentProps {
 export default function Page({
 	params: { idCategoria, idProducto },
 }: ComponentProps) {
-	const { landing } = useDataContext();
+	const { landing, empresa } = useDataContext();
 	const router = useRouter();
 
 	const landingData = useMemo(() => landing?.[0], [landing]);
@@ -70,8 +70,8 @@ export default function Page({
 
 	const imageUrls = extractImageUrls();
 
-	const handleCardClick = (idProducto: string) => {
-		router.push(`/${idProducto}`);
+	const handleCardClick = (idCategoria: string, idProducto: string) => {
+		router.push(`/${idCategoria}/${idProducto}`);
 	};
 
 	if (!landing || landing.length === 0) {
@@ -80,7 +80,7 @@ export default function Page({
 
 	return (
 		<>
-			<NavBar logo={logo} />
+			<NavBar logo={empresa.logo} />
 			<div className="flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 mt-20 pb-20">
 				<div
 					className="blog-content text-black mt-6 w-full sm:w-[480px] md:w-[580px] mx-auto"
@@ -125,7 +125,12 @@ export default function Page({
 													fixImageUrl(relatedProduct.image)
 												}
 												// @ts-ignore
-												onClick={() => handleCardClick(relatedProduct.id)}
+												onClick={() =>
+													handleCardClick(
+														relatedProduct.id_categoria,
+														relatedProduct.id
+													)
+												}
 											/>
 										</div>
 									</WhileTap>

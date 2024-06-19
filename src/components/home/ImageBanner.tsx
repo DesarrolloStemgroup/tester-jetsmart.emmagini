@@ -45,18 +45,23 @@ export const ImageBanner = ({
 						{subtitle}
 					</h3>
 					{button && (
-						<Link href={link}>
-							<button
-								className={"w-full sm:w-[323px] h-12 bg-blueEmmagini mt-4 rounded-[50px] border-4 border-gray-300".concat(
-									" ",
-									buttonClassName || ""
-								)}
-							>
-								<span className="text-center align-middle text-white">
-									{buttonText}
-								</span>
-							</button>
-						</Link>
+						<button
+							onClick={() =>
+								window.open(
+									link.startsWith("http") ? link : `https://${link}`,
+									"_blank",
+									"noopener,noreferrer"
+								)
+							}
+							className={"w-full sm:w-[323px] h-12 bg-blueEmmagini mt-4 rounded-[50px] border-4 border-gray-300".concat(
+								" ",
+								buttonClassName || ""
+							)}
+						>
+							<span className="text-center align-middle text-white">
+								{buttonText}
+							</span>
+						</button>
 					)}
 				</div>
 			</div>
