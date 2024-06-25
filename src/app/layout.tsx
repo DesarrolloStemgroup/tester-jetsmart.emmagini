@@ -39,7 +39,7 @@ const fonts = localFont({
 			style: "italic",
 		},
 		{
-			path: "../../public/assets/fonts/impact.ttf",
+			path: "../../public/assets/fonts/Impact.ttf",
 			weight: "600",
 			style: "normal",
 		},
