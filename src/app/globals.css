@@ -13,3 +13,9 @@ body {
 .bg {
 	background-color: white !important;
 }
+
+.note-video-clip {
+	width: 836px !important;
+	height: 400px;
+	margin-top: 20px;
+}

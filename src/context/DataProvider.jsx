@@ -16,6 +16,7 @@ export const DataProvider = ({ children }) => {
 	const [empresa, setEmpresa] = useState();
 	const [landing, setLanding] = useState();
 	const [language, setLanguage] = useState();
+	const [theme, setTheme] = useState();
 
 	const getAppData = useCallback(async () => {
 		const isEsLa = language === "es-la";
@@ -56,11 +57,41 @@ export const DataProvider = ({ children }) => {
 	}, [getAppData]);
 
 	useEffect(() => {
-		console.log("lenguaje", language);
-	}, [language]);
+		console.log("toda la data", data);
+	}, [landing]);
 
-	/*console.log("data", data);
-		console.log("empresa", empresa);*/
+	const getThemeData = useCallback(async () => {
+		try {
+			const response = await axios.post(
+				"https://backend.emmagini.com/api2/gettheme",
+				{
+					host: "demo6.emmagini.com",
+					lang: "es",
+				},
+				{
+					headers: {
+						"Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+					},
+				}
+			);
+
+			setTheme(response.data);
+
+			return response.data;
+		} catch (error) {
+			console.error("Error al hacer la solicitud:", error);
+
+			throw error;
+		}
+	}, []);
+
+	useEffect(() => {
+		getThemeData();
+	}, [getThemeData]);
+
+	useEffect(() => {
+		console.log(theme);
+	}, [theme]);
 
 	return (
 		<DataContext.Provider
@@ -73,6 +104,8 @@ export const DataProvider = ({ children }) => {
 				setLanding,
 				language,
 				setLanguage,
+				theme,
+				setTheme,
 			}}
 		>
 			{children}

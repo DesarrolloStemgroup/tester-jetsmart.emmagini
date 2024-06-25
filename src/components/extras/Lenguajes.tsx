@@ -7,7 +7,7 @@ import peru from "../../../public/assets/peru.png";
 import colombia from "../../../public/assets/colombia.png";
 import paraguay from "../../../public/assets/paraguay.png";
 
-function Banderas() {
+function Lenguajes() {
 	const router = useRouter();
 
 	const handleLanguageChange = (lang: string) => {
@@ -55,4 +55,4 @@ function Banderas() {
 	);
 }
 
-export default Banderas;
+export default Lenguajes;
