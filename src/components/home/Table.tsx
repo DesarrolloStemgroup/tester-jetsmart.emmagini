@@ -28,8 +28,8 @@ function Table() {
 	};
 
 	return (
-		<div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 p-10 mb-32 pb-[110px] mt-20">
-			<div className="grid grid-cols-2 sm:grid-cols- md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-4">
+		<div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 p-10 mb-32 pb-[110px] mt-2">
+			<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
 				{/*// @ts-ignore */}
 				{categorias.map((categoria) => (
 					<WhileTap key={categoria.id}>

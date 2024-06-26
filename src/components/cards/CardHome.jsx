@@ -4,7 +4,7 @@ import "../../app/globals.css";
 function CardHome({ text, imageCard, onClick }) {
 	return (
 		<div
-			className="rounded-md shadow-md p-4 w-[172.24px] h-[203.01px] lg:w-[293px] lg:h-auto flex flex-col items-center cursor-pointer lg:ml-[25px] drop-shadow-lg max-h-[240px] bg"
+			className="rounded-md shadow-md p-4 w-[280.24px] h-[263.01px] lg:w-[293px] lg:h-auto flex flex-col items-center cursor-pointer lg:ml-[25px] drop-shadow-lg max-h-[240px] bg"
 			onClick={onClick}
 		>
 			<div className="relative h-40 w-full">
@@ -16,7 +16,7 @@ function CardHome({ text, imageCard, onClick }) {
 					className="w-full h-full"
 				/>
 			</div>
-			<span className="text-black font-bold text-base leading-5 text-center mt-2">
+			<span className="text-black font-bold text-base leading-5 text-center mt-2 aling-middle mt-4">
 				{text}
 			</span>
 		</div>

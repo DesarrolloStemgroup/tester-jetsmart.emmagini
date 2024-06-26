@@ -7,6 +7,7 @@ import CardHome from "@/components/cards/CardHome";
 import { useDataContext } from "@/context/DataProvider";
 import { Carousel } from "flowbite-react";
 import WhileTap from "@/components/animations/WhileTap";
+import "@/styles/styles.css";
 import "@/app/globals.css";
 
 interface ComponentProps {
@@ -46,7 +47,7 @@ export default function Page({
 	}, [landingData, product]);
 
 	const fixImageUrl = (url: string) => {
-		if (url.startsWith("//")) {
+		if (url?.startsWith("//")) {
 			return `https:${url}`;
 		}
 		return url;
@@ -73,7 +74,20 @@ export default function Page({
 	};
 
 	if (!landing || landing.length === 0) {
-		return <div className="mt-20 text-black">Cargando...</div>;
+		return (
+			<div className="mt-96">
+				<section className="dots-container">
+					<div className="dot"></div>
+					<div className="dot"></div>
+					<div className="dot"></div>
+					<div className="dot"></div>
+					<div className="dot"></div>
+				</section>
+				<h1 className="text-blueEmmagini text-center mt-4 font-semibold">
+					CARGANDO
+				</h1>
+			</div>
+		);
 	}
 
 	const showCarousel = imageUrls.length > 1;
@@ -93,37 +107,24 @@ export default function Page({
 									return (
 										<section
 											key={index}
-											className="titulo"
-											style={{ color: landing?.text_color_1 }}
-										>
-											{product?.titulo}
-										</section>
-									);
-								case 2:
-									return (
-										<section
-											key={index}
-											className="descripcion"
+											className="descripcion mt-20"
 											dangerouslySetInnerHTML={{ __html: product?.descripcion }}
 										></section>
 									);
-								case 3:
+								case 2:
 									return (
 										product?.video && (
 											<section
 												key={index}
 												className="w-full sm:w-[480px] md:w-[836px] h-[500px] relative mt-6 mx-auto mb-8"
 											>
-												<video
-													className="w-full sm:w-[480px] md:w-[836px] h-[500px] relative mt-6 mx-auto mb-8"
-													controls
-												>
+												<video className="" controls>
 													<source src={product.video} type="video/mp4" />
 												</video>
 											</section>
 										)
 									);
-								case 4:
+								case 3:
 									return (
 										product?.audio && (
 											<section key={index} className="audio">
@@ -137,7 +138,7 @@ export default function Page({
 											</section>
 										)
 									);
-								case 5:
+								case 4:
 									return (
 										<section key={index} className="galeria">
 											<div className="w-full sm:w-[480px] md:w-[836px] h-[500px] relative mt-6 mx-auto mb-8">
@@ -165,7 +166,7 @@ export default function Page({
 											</div>
 										</section>
 									);
-								case 6:
+								case 5:
 									return (
 										<section
 											key={index}
@@ -173,7 +174,7 @@ export default function Page({
 											dangerouslySetInnerHTML={{ __html: product?.contenido }}
 										></section>
 									);
-								case 7:
+								case 6:
 									return (
 										<section key={index} className="relacionado">
 											<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-2">
@@ -210,3 +211,19 @@ export default function Page({
 		</>
 	);
 }
+
+/*
+
+case 1:
+									return (
+										<section
+											key={index}
+											className="titulo"
+											style={{ color: landing?.text_color_1 }}
+										>
+											{product?.titulo}
+										</section>
+									);
+
+
+									*/

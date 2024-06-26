@@ -14,42 +14,78 @@ function Lenguajes() {
 		router.push(`/${lang}`);
 	};
 	return (
-		<div>
+		<div className="flex flex-row flex-wrap gap-2">
 			<button
-				className="ml-2 border-2 border-solid border-white rounded-full"
+				className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 flex items-center justify-center p-0 bg-white rounded-full justify-end"
 				onClick={() => handleLanguageChange("es-sr")}
 			>
-				<Image src={argentina} width={30} height={30} alt="argentina" />
+				<Image
+					className="w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9"
+					src={argentina}
+					width={30}
+					height={30}
+					alt="argentina"
+				/>
 			</button>
 			<button
-				className="ml-2 border-2 border-solid border-white rounded-full"
+				className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 flex items-center justify-center p-0 bg-white rounded-full justify-end"
 				onClick={() => handleLanguageChange("es-la")}
 			>
-				<Image src={colombia} width={30} height={30} alt="colombia" />
+				<Image
+					src={colombia}
+					width={30}
+					height={30}
+					alt="colombia"
+					className="w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9"
+				/>
 			</button>
 			<button
-				className="ml-2 border-2 border-solid border-white rounded-full"
+				className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 flex items-center justify-center p-0 bg-white rounded-full justify-end"
 				onClick={() => handleLanguageChange("es-sr")}
 			>
-				<Image src={uruguay} width={30} height={30} alt="uruguay" />
+				<Image
+					src={uruguay}
+					width={30}
+					height={30}
+					alt="uruguay"
+					className="w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9"
+				/>
 			</button>
 			<button
-				className="ml-2 border-2 border-solid border-white rounded-full"
+				className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 flex items-center justify-center p-0 bg-white rounded-full justify-end"
 				onClick={() => handleLanguageChange("es-la")}
 			>
-				<Image src={paraguay} width={30} height={30} alt="paraguay" />
+				<Image
+					src={paraguay}
+					width={30}
+					height={30}
+					alt="paraguay"
+					className="w-5 h-5 md:w-8 md:h-8 lg:w-10 lg:h-10"
+				/>
 			</button>
 			<button
-				className="ml-2 border-2 border-solid border-white rounded-full"
+				className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 flex items-center justify-center p-0 bg-white rounded-full justify-end"
 				onClick={() => handleLanguageChange("es-la")}
 			>
-				<Image src={peru} width={30} height={30} alt="peru" />
+				<Image
+					src={peru}
+					width={30}
+					height={30}
+					alt="peru"
+					className="w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9"
+				/>
 			</button>
 			<button
-				className="ml-2 border-2 border-solid border-white rounded-full"
+				className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 flex items-center justify-center p-0 bg-white rounded-full justify-end"
 				onClick={() => handleLanguageChange("es-la")}
 			>
-				<Image src={chile} width={30} height={30} alt="chile" />
+				<Image
+					src={chile}
+					width={30}
+					height={30}
+					alt="chile"
+					className="w-5 h-5 md:w-7 md:h-7 lg:w-9 lg:h-9"
+				/>
 			</button>
 		</div>
 	);

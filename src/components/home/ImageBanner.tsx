@@ -23,7 +23,7 @@ export const ImageBanner = ({
 	buttonText,
 }: ImageBannerProps) => {
 	return (
-		<div className="relative overflow-hidden mt-16 h-[460px]">
+		<div className="relative overflow-hidden mt-10 h-[400px]">
 			<div className="absolute inset-0">
 				<Image
 					src={image}

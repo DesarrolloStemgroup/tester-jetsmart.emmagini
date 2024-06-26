@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar";
 import CardHome from "@/components/cards/CardHome";
 import { useDataContext } from "@/context/DataProvider";
 import WhileTap from "@/components/animations/WhileTap";
+import "@/styles/styles.css";
 
 interface ComponentProps {
 	params: {
@@ -16,7 +17,22 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 	const router = useRouter();
 
 	if (!landing || landing.length === 0) {
-		return <div className="mt-20 text-black">Cargando...</div>;
+		return (
+			<div className="mt-20 text-black">
+				<div className="mt-96">
+					<section className="dots-container">
+						<div className="dot"></div>
+						<div className="dot"></div>
+						<div className="dot"></div>
+						<div className="dot"></div>
+						<div className="dot"></div>
+					</section>
+					<h1 className="text-blueEmmagini text-center mt-4 font-semibold">
+						CARGANDO
+					</h1>
+				</div>
+			</div>
+		);
 	}
 
 	const landingData = landing[0];

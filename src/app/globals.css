@@ -15,7 +15,7 @@ body {
 }
 
 .note-video-clip {
-	width: 836px !important;
+	width: 100% !important;
 	height: 400px;
 	margin-top: 20px;
 }
