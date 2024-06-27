@@ -144,33 +144,28 @@ export default function Page({
 									return (
 										<section key={index} className="galeria">
 											<div className="w-full sm:w-[480px] md:w-[836px] h-[500px] relative mt-6 mx-auto mb-8">
-												{showCarousel ? (
-													<Carousel>
-														{imageUrls.map((url, imgIndex) => (
-															<div key={imgIndex} className="h-[400px]">
-																<Image
-																	src={fixImageUrl(url)}
-																	alt={`product image ${imgIndex}`}
-																	className="w-full h-full object-cover"
-																	layout="fill"
-																/>
-															</div>
-														))}
-													</Carousel>
-												) : imageUrls.length > 0 ? (
-													<Image
-														src={fixImageUrl(imageUrls[0])}
-														alt={`product image 0`}
-														className="w-full h-full object-cover"
-														layout="fill"
-													/>
-												) : (
-													<div className="h-[400px] w-full flex items-center justify-center bg-gray-200">
-														<span className="text-gray-500">
-															No image available
-														</span>
-													</div>
-												)}
+												{imageUrls.length > 0 &&
+													(showCarousel ? (
+														<Carousel>
+															{imageUrls.map((url, imgIndex) => (
+																<div key={imgIndex} className="h-[400px]">
+																	<Image
+																		src={fixImageUrl(url)}
+																		alt={`product image ${imgIndex}`}
+																		className="w-full h-full object-cover"
+																		layout="fill"
+																	/>
+																</div>
+															))}
+														</Carousel>
+													) : (
+														<Image
+															src={fixImageUrl(imageUrls[0])}
+															alt={`product image 0`}
+															className="w-full h-full object-cover"
+															layout="fill"
+														/>
+													))}
 											</div>
 										</section>
 									);
