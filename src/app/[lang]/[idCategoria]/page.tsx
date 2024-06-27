@@ -13,8 +13,10 @@ interface ComponentProps {
 }
 
 export default function Page({ params: { idCategoria } }: ComponentProps) {
-	const { landing, empresa } = useDataContext();
+	const { landing, empresa, language } = useDataContext();
 	const router = useRouter();
+
+	console.log("lenguaje page categorias", language);
 
 	if (!landing || landing.length === 0) {
 		return (
@@ -48,7 +50,7 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 	);
 	// @ts-ignore
 	const handleCardClick = (idProducto) => {
-		router.push(`/${idCategoria}/${idProducto}`);
+		router.push(`/${language}/${idCategoria}/${idProducto}`);
 	};
 
 	return (

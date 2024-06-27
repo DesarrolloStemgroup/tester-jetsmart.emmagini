@@ -1,29 +1,15 @@
 "use client";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { useParams } from "next/navigation";
+
 import { useDataContext } from "@/context/DataProvider";
 import NavBar from "@/components/NavBar";
 import ImageBanner from "../../components/home/ImageBanner";
 import Table from "@/components/home/Table";
 import "@/styles/styles.css";
 
-interface ComponentProps {
-	params: {
-		lang: string;
-	};
-}
-
 export default function Home() {
-	const { data, empresa, setLanguage } = useDataContext();
-	const router = useRouter();
-	const { lang } = useParams();
+	const { data, empresa, language } = useDataContext();
 
-	useEffect(() => {
-		if (lang) {
-			setLanguage(lang);
-		}
-	}, [lang]);
+	console.log("lenguaje home", language);
 
 	if (!empresa && !data) {
 		return (

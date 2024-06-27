@@ -18,8 +18,8 @@ export const DataProvider = ({ children }) => {
 	const [language, setLanguage] = useState();
 	const [theme, setTheme] = useState();
 
-	const getAppData = useCallback(async () => {
-		const isEsLa = language === "es-la";
+	const getAppData = useCallback(async (lang) => {
+		const isEsLa = lang === "es-la";
 		const callbackUrl = isEsLa
 			? "https://demo5.emmagini.com/landing.php#"
 			: "https://demo6.emmagini.com/landing.php#";
@@ -44,21 +44,23 @@ export const DataProvider = ({ children }) => {
 			setEmpresa(response.data.empresa);
 			setLanding(response.data.landing);
 
+			console.log("id revista", 123);
+			console.log("landing", response.data.landing);
+			console.log("categoria", 123);
+			console.log("productos", 123);
+
 			return response.data;
 		} catch (error) {
 			console.error("Error al hacer la solicitud:", error);
 
 			throw error;
 		}
-	}, [language]);
+	}, []);
 
 	useEffect(() => {
-		getAppData();
-	}, [getAppData]);
-
-	useEffect(() => {
-		console.log("toda la data", data);
-	}, [landing]);
+		console.log("language", language);
+		getAppData(language);
+	}, [getAppData, language]);
 
 	const getThemeData = useCallback(async () => {
 		try {
@@ -89,10 +91,6 @@ export const DataProvider = ({ children }) => {
 		getThemeData();
 	}, [getThemeData]);
 
-	useEffect(() => {
-		console.log(theme);
-	}, [theme]);
-
 	return (
 		<DataContext.Provider
 			value={{
@@ -106,6 +104,7 @@ export const DataProvider = ({ children }) => {
 				setLanguage,
 				theme,
 				setTheme,
+				getAppData,
 			}}
 		>
 			{children}

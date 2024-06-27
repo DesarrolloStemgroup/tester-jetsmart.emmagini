@@ -7,12 +7,8 @@ import { useDataContext } from "@/context/DataProvider";
 import WhileTap from "../animations/WhileTap";
 
 function Table() {
-	const { landing } = useDataContext();
+	const { landing, language } = useDataContext();
 	const router = useRouter();
-
-	useEffect(() => {
-		console.log(landing);
-	}, [landing]);
 
 	const categorias = landing && landing.length > 0 ? landing[0].categorias : [];
 
@@ -24,7 +20,7 @@ function Table() {
 	}
 
 	const handleCardClick = (idCategoria: string) => {
-		router.push(`/${idCategoria}`);
+		router.push(`${language}/${idCategoria}`);
 	};
 
 	return (
