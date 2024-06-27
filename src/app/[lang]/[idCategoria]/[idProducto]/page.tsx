@@ -34,8 +34,6 @@ export default function Page({
 		);
 	}, [landingData]);
 
-	console.log("producto y descripcion", product.descripcion);
-
 	const relatedProducts: any[] = useMemo(() => {
 		if (!landingData?.productos || !product) return [];
 		return landingData.productos.filter(
