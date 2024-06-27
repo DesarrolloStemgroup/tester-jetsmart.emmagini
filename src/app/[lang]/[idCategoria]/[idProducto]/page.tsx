@@ -157,13 +157,19 @@ export default function Page({
 															</div>
 														))}
 													</Carousel>
-												) : (
+												) : imageUrls.length > 0 ? (
 													<Image
 														src={fixImageUrl(imageUrls[0])}
 														alt={`product image 0`}
 														className="w-full h-full object-cover"
 														layout="fill"
 													/>
+												) : (
+													<div className="h-[400px] w-full flex items-center justify-center bg-gray-200">
+														<span className="text-gray-500">
+															No image available
+														</span>
+													</div>
 												)}
 											</div>
 										</section>
