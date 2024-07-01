@@ -44,8 +44,6 @@ export const DataProvider = ({ children }) => {
 			setEmpresa(response.data.empresa);
 			setLanding(response.data.landing);
 
-			console.log("landing", response.data.landing);
-
 			return response.data;
 		} catch (error) {
 			console.error("Error al hacer la solicitud:", error);
