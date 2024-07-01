@@ -1,4 +1,4 @@
-/*"use client";
+"use client";
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
 import Image from "next/image";
@@ -213,9 +213,8 @@ export default function Page({
 			</div>
 		</>
 	);
-} */
-
-"use client";
+}
+/*"use client";
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
 import Image from "next/image";
@@ -417,4 +416,4 @@ export default function Page({
 			</div>
 		</>
 	);
-}
+}*/
