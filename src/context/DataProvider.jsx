@@ -44,10 +44,7 @@ export const DataProvider = ({ children }) => {
 			setEmpresa(response.data.empresa);
 			setLanding(response.data.landing);
 
-			console.log("id revista", 123);
 			console.log("landing", response.data.landing);
-			console.log("categoria", 123);
-			console.log("productos", 123);
 
 			return response.data;
 		} catch (error) {
@@ -58,7 +55,6 @@ export const DataProvider = ({ children }) => {
 	}, []);
 
 	useEffect(() => {
-		console.log("language", language);
 		getAppData(language);
 	}, [getAppData, language]);
 

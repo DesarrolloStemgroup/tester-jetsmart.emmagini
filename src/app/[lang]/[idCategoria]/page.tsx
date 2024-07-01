@@ -16,8 +16,6 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 	const { landing, empresa, language } = useDataContext();
 	const router = useRouter();
 
-	console.log("lenguaje page categorias", language);
-
 	if (!landing || landing.length === 0) {
 		return (
 			<div className="mt-20 text-black">

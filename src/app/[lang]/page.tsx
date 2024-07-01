@@ -9,8 +9,6 @@ import "@/styles/styles.css";
 export default function Home() {
 	const { data, empresa, language } = useDataContext();
 
-	console.log("lenguaje home", language);
-
 	if (!empresa && !data) {
 		return (
 			<div className="mt-96">
