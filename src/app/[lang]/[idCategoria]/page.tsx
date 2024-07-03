@@ -1,8 +1,12 @@
 "use client";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useDataContext } from "@/context/DataProvider";
+import { Carousel } from "flowbite-react";
 import NavBar from "@/components/NavBar";
 import CardHome from "@/components/cards/CardHome";
-import { useDataContext } from "@/context/DataProvider";
+import ButtonNav from "@/components/home/ButtonNav";
+
 import WhileTap from "@/components/animations/WhileTap";
 import "@/styles/styles.css";
 
@@ -42,6 +46,8 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 		(categoriaItem) => categoriaItem.id === idCategoria
 	);
 
+	console.log(categoria);
+
 	const productos = landingData.productos.filter(
 		// @ts-ignore
 		(productItem) => productItem.id_categoria === idCategoria
@@ -51,11 +57,35 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 		router.push(`/${language}/${idCategoria}/${idProducto}`);
 	};
 
+	const fixImageUrl = (url: string) => {
+		if (url?.startsWith("//")) {
+			return `https:${url}`;
+		}
+		return url;
+	};
+
 	return (
 		<>
 			<NavBar logo={empresa.logo} />
-			<div className="mt-20 container mx-auto px-4 sm:px-6 lg:px-8 py-8 p-10 mb-32">
-				<div className="grid grid-cols-2 sm:grid-cols- md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-6">
+
+			<div className="mt-20 container mx-auto sm:px-6 lg:px-8 py-8 mb-32">
+				{categoria?.auspiciantes ? (
+					<div className="w-full  sm:h-[150px] md:h-[300px]">
+						<Carousel className="w-full h-full">
+							{categoria.auspiciantes.map((auspiciante: any, imgIndex: any) => (
+								<div key={imgIndex} className="w-full h-full relative">
+									<Image
+										src={fixImageUrl(auspiciante.ruta)}
+										alt={`product image ${auspiciante.id}`}
+										className="w-full h-full object-cover"
+										layout="fill"
+									/>
+								</div>
+							))}
+						</Carousel>
+					</div>
+				) : null}
+				<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 mt-10">
 					{/*// @ts-ignore */}
 					{productos.map((producto) => (
 						<WhileTap key={producto.id}>
@@ -70,6 +100,7 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 					))}
 				</div>
 			</div>
+			<ButtonNav />
 		</>
 	);
 }

@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import ImageBanner from "../../components/home/ImageBanner";
 import Table from "@/components/home/Table";
 import "@/styles/styles.css";
+import ButtonNav from "@/components/home/ButtonNav";
 
 export default function Home() {
 	const { data, empresa, language } = useDataContext();
@@ -42,6 +43,7 @@ export default function Home() {
 			)}
 
 			<Table />
+			<ButtonNav />
 		</main>
 	);
 }

@@ -4,10 +4,10 @@ import "../../app/globals.css";
 function CardHome({ text, imageCard, onClick }) {
 	return (
 		<div
-			className="rounded-md shadow-md p-4 w-[280.24px] h-[263.01px] lg:w-[293px] lg:h-auto flex flex-col items-center cursor-pointer lg:ml-[25px] drop-shadow-lg max-h-[240px] bg"
+			className="rounded-md shadow-md p-4 w-[280.24px] h-[263.01px] lg:w-full lg:h-[300px]  flex flex-col items-center cursor-pointer  drop-shadow-lg max-h-[640px] bg"
 			onClick={onClick}
 		>
-			<div className="relative h-40 w-full">
+			<div className="relative h-52 w-full">
 				<Image
 					src={imageCard}
 					alt="Card"
