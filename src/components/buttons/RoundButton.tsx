@@ -25,7 +25,7 @@ export const RoundButton = ({
 		<button
 			onClick={onClick}
 			type={type}
-			className={"flex flex-row gap-3 items-center justify-center w-full rounded-full shadow-md border border-gray-200 cursor-pointer"
+			className={"flex flex-row gap-3 items-center justify-center rounded-full shadow-md border border-gray-200 cursor-pointer"
 				.concat(" ", buttonClassName || "")
 				.concat(" ", isDisabled ? "bg-gray-500 border-gray-500" : "")}
 			disabled={isDisabled}
@@ -33,7 +33,7 @@ export const RoundButton = ({
 			{logo ? logo : null}
 
 			<p
-				className={"text-black font-medium text-center text-md".concat(
+				className={"font-medium text-center text-md".concat(
 					" ",
 					textClassName || ""
 				)}

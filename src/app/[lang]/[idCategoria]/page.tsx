@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDataContext } from "@/context/DataProvider";
 import { Carousel } from "flowbite-react";
@@ -9,6 +10,7 @@ import ButtonNav from "@/components/home/ButtonNav";
 
 import WhileTap from "@/components/animations/WhileTap";
 import "@/styles/styles.css";
+import { RoundButton } from "@/components/buttons/RoundButton";
 
 interface ComponentProps {
 	params: {
@@ -70,7 +72,7 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 
 			<div className="mt-20 container mx-auto sm:px-6 lg:px-8 py-8 mb-32">
 				{categoria?.auspiciantes ? (
-					<div className="w-full  sm:h-[150px] md:h-[300px]">
+					<div className="w-full h-[150px] md:h-[300px]">
 						<Carousel className="w-full h-full">
 							{categoria.auspiciantes.map((auspiciante: any, imgIndex: any) => (
 								<div key={imgIndex} className="w-full h-full relative">
@@ -85,7 +87,19 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 						</Carousel>
 					</div>
 				) : null}
-				<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 mt-10">
+
+				<div className="flex justify-center mt-6">
+					{categoria?.url_descarga ? (
+						<Link href={categoria.url_descarga} target="_blank">
+							<RoundButton
+								text="Descargar revista"
+								buttonClassName="w-[280px] md:w-[344px] h-[48px] bg-blueEmmagini text-white border-2"
+							/>
+						</Link>
+					) : null}
+				</div>
+
+				<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 mt-6">
 					{/*// @ts-ignore */}
 					{productos.map((producto) => (
 						<WhileTap key={producto.id}>
