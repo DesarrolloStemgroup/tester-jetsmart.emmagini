@@ -66,7 +66,7 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 
 	return (
 		<>
-			<NavBar logo={empresa.logo} />
+			<NavBar logo={empresa.logo} showButton={true} />
 
 			<div className="mt-20 container mx-auto sm:px-6 lg:px-8 py-8 mb-32">
 				{categoria?.auspiciantes ? (

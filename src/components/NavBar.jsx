@@ -8,13 +8,15 @@ import { useDataContext } from "@/context/DataProvider";
 import { RoundButton } from "./buttons/RoundButton";
 
 //  TODO: Cambiar el INGRESAR del boton de la trivia por el texto que venga por api
-const NavBar = ({ logo }) => {
+
+const NavBar = ({ logo, showButton }) => {
 	const { language } = useDataContext();
 	const router = useRouter();
 
 	const handleCardClick = () => {
 		router.push(`/${language}`);
 	};
+
 	const handleButtonTriviaClick = () => {
 		router.push(`/${language}/auth/login`);
 	};
@@ -40,12 +42,14 @@ const NavBar = ({ logo }) => {
 			<div className="flex items-center ml-auto gap-3">
 				<Lenguajes />
 
-				<RoundButton
-					buttonClassName="w-[135px] h-[30px] bg-white rounded-[50px] border-2 border-gray-300"
-					text="INGRESAR"
-					textClassName="text-blueEmmagini"
-					onClick={handleButtonTriviaClick}
-				/>
+				{showButton && (
+					<RoundButton
+						buttonClassName="w-[135px] h-[30px] bg-white rounded-[50px] border-2 border-gray-300"
+						text="INGRESAR"
+						textClassName="text-blueEmmagini"
+						onClick={handleButtonTriviaClick}
+					/>
+				)}
 			</div>
 		</div>
 	);

@@ -6,7 +6,7 @@ import argentina from "../../../public/assets/argentina.png";
 import uruguay from "../../../public/assets/uruguay.png";
 import peru from "../../../public/assets/peru.png";
 import colombia from "../../../public/assets/colombia.png";
-import paraguay from "../../../public/assets/paraguay.png";
+import paraguay from "../../../public/assets/par.png";
 
 const Lenguajes = () => {
 	const [isOpen, setIsOpen] = useState(false);

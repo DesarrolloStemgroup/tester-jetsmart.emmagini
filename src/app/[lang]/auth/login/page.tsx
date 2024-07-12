@@ -69,12 +69,12 @@ export default function Page() {
 				</div>
 
 				<div className="w-full flex flex-row items-center justify-center">
-					<p className="text-gray-400 font-regular text-center text-md">
+					{/*<p className="text-gray-400 font-regular text-center text-md">
 						Olvidaste tu contraseña?{" "}
 						<span className="text-blue-400 hover:text-blue-500">
 							<Link href="">Hace click aqui</Link>
 						</span>
-					</p>
+					</p>*/}
 				</div>
 
 				<div className="flex justify-center items-center">

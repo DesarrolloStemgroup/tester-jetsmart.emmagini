@@ -152,7 +152,7 @@ export default function Page() {
 				<p className="text-gray-400 font-regular text-center text-md">
 					Ya tienes una cuenta? Ingresa{" "}
 					<span className="text-blue-400 hover:text-blue-500">
-						<Link href="./login">aca</Link>
+						<Link href="./login/email">acá</Link>
 					</span>
 				</p>
 			</div>
