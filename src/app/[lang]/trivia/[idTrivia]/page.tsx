@@ -252,7 +252,7 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 	return (
 		<>
 			<NavBar logo={empresa.logo} showButton={false} />
-			<div className="flex flex-col lg:flex-row gap-10 pt-20 pb-5 w-full max-w-[1300px] lg:h-screen overflow-hidden p-6 items-center mx-auto">
+			<div className="flex flex-col lg:flex-row gap-10 pt-20 pb-5 w-full max-w-[1300px] lg:h-screen overflow-hidden p-6 items-center mx-auto mt-6">
 				<div className="flex flex-col lg:gap-5 w-full lg:w-[705px]">
 					<Image
 						// @ts-ignore
@@ -287,12 +287,6 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 								</div>
 						  ))
 						: null}
-					<RoundButton
-						buttonClassName="w-full h-[48px] bg-blueEmmagini rounded-[50px] border-2 border-gray-300"
-						text="Volver"
-						textClassName="text-white"
-						onClick={handleCardClick}
-					/>
 				</div>
 				<Modal
 					text={modalData.text}
