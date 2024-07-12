@@ -252,7 +252,7 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 	return (
 		<>
 			<NavBar logo={empresa.logo} showButton={false} />
-			<div className="flex flex-col lg:flex-row gap-10 pt-20 pb-5 w-full max-w-[1300px] lg:h-screen overflow-hidden p-6 items-center mx-auto mt-6">
+			<div className="flex flex-col lg:flex-row gap-10 pt-20 w-full max-w-[1300px] lg:h-screen overflow-hidden p-6 items-center mx-auto mt-6 pb-[190px]">
 				<div className="flex flex-col lg:gap-5 w-full lg:w-[705px]">
 					<Image
 						// @ts-ignore
@@ -263,7 +263,7 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 						height={500}
 					/>
 				</div>
-				<div className="w-full lg:w-[537px] md:h-[542px] flex flex-col gap-5">
+				<div className="w-full lg:w-[537px] md:h-[542px] flex flex-col gap-5 pb-[80px]">
 					{videoData.preguntas && videoData.preguntas.length > 0
 						? videoData.preguntas.map((pregunta: any, index: any) => (
 								<div
