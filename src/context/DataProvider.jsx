@@ -56,9 +56,9 @@ export const DataProvider = ({ children }) => {
 		getAppData(language);
 	}, [getAppData, language]);
 
-	/*useEffect(() => {
-		console.log(data);
-	}, [data]); */
+	useEffect(() => {
+		console.log(empresa);
+	}, [empresa]);
 
 	const getThemeData = useCallback(async () => {
 		try {

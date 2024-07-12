@@ -36,11 +36,11 @@ const GoogleLogin = () => {
 					}
 				);
 
-				console.log("Respuesta de inicio de sesión con Google:", response.data);
+				//console.log("Respuesta de inicio de sesión con Google:", response.data);
 
 				window.location.href = "/app";
 			} catch (error) {
-				console.error("Error al hacer la solicitud:", error);
+				//console.error("Error al hacer la solicitud:", error);
 			}
 		};
 

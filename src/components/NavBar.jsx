@@ -16,7 +16,7 @@ const NavBar = ({ logo }) => {
 		router.push(`/${language}`);
 	};
 	const handleButtonTriviaClick = () => {
-		router.push(`/${language}/login`);
+		router.push(`/${language}/auth/login`);
 	};
 
 	return (

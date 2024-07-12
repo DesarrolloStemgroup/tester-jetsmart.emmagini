@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 import { DataProvider } from "@/context/DataProvider";
+import { AuthProvider } from "@/context/AuthProvider";
 
 const fonts = localFont({
 	src: [
@@ -75,7 +76,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${fonts.variable} font-sans`}>
-				<DataProvider>{children}</DataProvider>
+				<AuthProvider>
+					<DataProvider>{children}</DataProvider>
+				</AuthProvider>
 			</body>
 		</html>
 	);

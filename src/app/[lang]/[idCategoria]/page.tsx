@@ -44,18 +44,16 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 	const landingData = landing[0];
 
 	const categoria = landingData.categorias.find(
-		// @ts-ignore
-		(categoriaItem) => categoriaItem.id === idCategoria
+		(categoriaItem: any) => categoriaItem.id === idCategoria
 	);
 
 	console.log(categoria);
 
 	const productos = landingData.productos.filter(
-		// @ts-ignore
-		(productItem) => productItem.id_categoria === idCategoria
+		(productItem: any) => productItem.id_categoria === idCategoria
 	);
-	// @ts-ignore
-	const handleCardClick = (idProducto) => {
+
+	const handleCardClick = (idProducto: any) => {
 		router.push(`/${language}/${idCategoria}/${idProducto}`);
 	};
 
@@ -92,7 +90,7 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 					{categoria?.url_descarga ? (
 						<Link href={categoria.url_descarga} target="_blank">
 							<RoundButton
-								text="Descargar revista"
+								text="Descargar Revista para leer offline"
 								buttonClassName="w-[280px] md:w-[344px] h-[48px] bg-blueEmmagini text-white border-2"
 							/>
 						</Link>
@@ -100,8 +98,7 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 				</div>
 
 				<div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4 mt-6">
-					{/*// @ts-ignore */}
-					{productos.map((producto) => (
+					{productos.map((producto: any) => (
 						<WhileTap key={producto.id}>
 							<div className="flex justify-center" key={producto.id}>
 								<CardHome
