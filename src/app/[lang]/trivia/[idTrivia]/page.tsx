@@ -577,7 +577,7 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 									key={index}
 									className="h-full flex flex-col justify-center items-center "
 								>
-									<h2 key={index} className="text-3xl text-center mb-6">
+									<h2 key={index} className="text-2xl text-center mb-6">
 										{pregunta.texto}
 									</h2>
 

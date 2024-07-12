@@ -17,20 +17,22 @@ const Modal = ({ text, onClick, isOpen, textButton, image }: ModalProps) => {
 	}
 	return (
 		<div className="fixed inset-0 flex items-center justify-center z-50 backdrop-filter backdrop-blur-lg bg-opacity-50 bg-gray-300">
-			<div className="bg-gray-100 p-6 w-[563px] h-[461px] relative rounded-lg flex flex-col items-center justify-center">
-				<h1 className="text-center text-xl font-bold mb-4">{text}</h1>
-				<div className="w-full h-[300px] flex items-center justify-center">
+			<div className="bg-gray-100 p-4 sm:p-6 w-[90%] sm:w-[563px] h-auto sm:h-[661px] relative rounded-lg flex flex-col items-center justify-center">
+				<h1 className="text-center text-lg sm:text-xl font-bold mb-4">
+					{text}
+				</h1>
+				<div className="w-full h-auto sm:h-[490px] flex items-center justify-center">
 					<Image
 						src={image}
 						alt="Modal Image"
-						className="object-cover"
-						width={300}
-						height={500}
+						className="object-cover max-w-full sm:w-[490px]"
+						width={490}
+						height={490}
 					/>
 				</div>
 				<button
 					onClick={onClick}
-					className="w-full h-[48px] bg-blueEmmagini rounded-[50px] border-2 border-gray-300 mt-4"
+					className="w-full h-[40px] sm:h-[48px] bg-blueEmmagini rounded-[50px] border-2 border-gray-300 mt-4"
 				>
 					<span className="text-white">{textButton}</span>
 				</button>
