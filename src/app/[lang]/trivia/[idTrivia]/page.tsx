@@ -20,9 +20,9 @@ interface ComponentProps {
 function Trivia({ params: { idTrivia } }: ComponentProps) {
 	const router = useRouter();
 	const { token, userId } = useAuthContext();
-	const { data, empresa, language } = useDataContext();
+	const { empresa } = useDataContext();
 	const [loading, setLoading] = useState(true);
-	const [answerData, setAnswerData] = useState("");
+	const [isAnswerLoading, setIsAnswerLoading] = useState(false);
 	const [modalOpen, setModalOpen] = useState(false);
 	const [modalData, setModalData] = useState({ text: "", image: "" });
 
@@ -146,6 +146,7 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 
 	const getAnswerData = useCallback(
 		async (preguntaId: string, respuestaId: string) => {
+			setIsAnswerLoading(true); // Set loading state
 			try {
 				const requestBody: { [key: string]: any } = {
 					id_album: idTrivia,
@@ -182,20 +183,21 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 					image: modalImage,
 					text: modalText,
 				});
+				setIsAnswerLoading(false);
 				setModalOpen(true);
 
 				return response.data;
 			} catch (error) {
 				console.error("Error al hacer la solicitud del video:", error);
+				setIsAnswerLoading(false);
 				throw error;
 			}
 		},
-		[token, userId, idTrivia, videoData]
+		[token, userId, idTrivia, videoData, empresa]
 	);
 
 	const handleAnswerClick = (preguntaId: string, respuestaId: string) => {
 		getAnswerData(preguntaId, respuestaId);
-		setModalOpen(true);
 	};
 
 	const handleCardClick = () => {
@@ -227,20 +229,37 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 		);
 	}
 
+	if (isAnswerLoading) {
+		return (
+			<div className="mt-20 text-black">
+				<div className="mt-96">
+					<section className="dots-container">
+						<div className="dot"></div>
+						<div className="dot"></div>
+						<div className="dot"></div>
+						<div className="dot"></div>
+						<div className="dot"></div>
+					</section>
+					<h1 className="text-blueEmmagini text-center mt-4 font-semibold">
+						Verificando respuesta
+					</h1>
+				</div>
+			</div>
+		);
+	}
+
 	return (
 		<>
 			<div className="flex flex-col lg:flex-row gap-10 pt-20 pb-5 w-full max-w-[1300px] lg:h-screen overflow-hidden p-6 items-center mx-auto">
 				<div className="flex flex-col lg:gap-5 w-full lg:w-[705px]">
-					<div className="flex flex-col gap-5">
-						<Image
-							// @ts-ignore
-							src={fixImageUrl(videoData.url)}
-							alt="Video Thumbnail"
-							className=""
-							width={400}
-							height={500}
-						/>
-					</div>
+					<Image
+						// @ts-ignore
+						src={fixImageUrl(videoData.url)}
+						alt="Video Thumbnail"
+						className="mx-auto"
+						width={400}
+						height={500}
+					/>
 				</div>
 				<div className="w-full lg:w-[537px] md:h-[542px] flex flex-col gap-5">
 					{videoData.preguntas && videoData.preguntas.length > 0
@@ -286,8 +305,7 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 	);
 }
 
-export default Trivia;
-*/
+export default Trivia; */
 
 "use client";
 
@@ -501,7 +519,7 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 		setModalOpen(false);
 	}, [getVideoData, setVideoData, setModalOpen]);
 
-	if (loading) {
+	if (loading || !videoData.id) {
 		return (
 			<div className="mt-20 text-black">
 				<div className="mt-96">
