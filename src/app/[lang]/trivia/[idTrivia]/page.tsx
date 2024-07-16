@@ -135,8 +135,10 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 	}, [getValidateData, getAlbumData, getVideoData]);
 
 	useEffect(() => {
-		fetchData();
-	}, [fetchData]);
+		if (token && userId) {
+			fetchData();
+		}
+	}, [fetchData, token, userId]);
 
 	const fixImageUrl = (url: string) => {
 		if (url?.startsWith("//")) {
@@ -147,7 +149,8 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 
 	const getAnswerData = useCallback(
 		async (preguntaId: string, respuestaId: string) => {
-			setIsAnswerLoading(true); // Set loading state
+			setIsAnswerLoading(true);
+
 			try {
 				const requestBody: { [key: string]: any } = {
 					id_album: idTrivia,

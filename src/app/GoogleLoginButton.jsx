@@ -34,11 +34,19 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 					}
 				);
 
-				localStorage.setItem("token", response.data.token);
-				localStorage.setItem("userId", response.data.userid);
+				const { token, userid, error, mensaje } = response.data;
 
-				setToken(response.data.token);
-				setUserId(response.data.userid);
+				if (error !== 0) {
+					return { error, mensaje };
+				}
+
+				localStorage.setItem(TOKEN_KEY, token);
+				localStorage.setItem(USER_ID_KEY, userid);
+
+				setToken(token);
+				setUserId(userid);
+
+				return { error, mensaje, token, userid };
 			} catch (error) {
 				console.error("Error al hacer la solicitud:", error);
 				throw error;
@@ -46,21 +54,14 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 		},
 		[router, language, idTrivia]
 	);
-
 	useEffect(() => {
-		console.log("token:", token);
-		console.log("userId:", userId);
-	}, [token, userId]);
-
-	function handleClick() {
-		return router.push(`/${language}/trivia/${idTrivia}`);
-	}
+		if (token && userId) {
+			router.push(`/${language}/trivia/${idTrivia}`);
+		}
+	}, [token, userId, router, language, idTrivia]);
 
 	return (
-		<button
-			className="w-full rounded-full shadow-md border border-gray-200 cursor-pointer"
-			onClick={handleClick}
-		>
+		<button className="w-full rounded-full shadow-md border border-gray-200 cursor-pointer">
 			<GoogleLogin
 				onSuccess={handleGoogleLoginSuccess}
 				onError={() => {

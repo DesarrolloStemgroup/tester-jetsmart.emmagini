@@ -3,9 +3,9 @@
 //import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-
-import "./globals.css";
+import { AuthProvider } from "@/context/AuthProvider";
 import { DataProvider } from "@/context/DataProvider";
+import "./globals.css";
 
 const fonts = localFont({
 	src: [
@@ -79,9 +79,11 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${fonts.variable} font-sans`}>
-				<GoogleOAuthProvider clientId={clientId}>
-					<DataProvider>{children}</DataProvider>
-				</GoogleOAuthProvider>
+				<AuthProvider>
+					<GoogleOAuthProvider clientId={clientId}>
+						<DataProvider>{children}</DataProvider>
+					</GoogleOAuthProvider>
+				</AuthProvider>
 			</body>
 		</html>
 	);
