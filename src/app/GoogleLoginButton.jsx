@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { GoogleLogin } from "@react-oauth/google";
 import axios from "axios";
@@ -9,7 +9,7 @@ import { useAuthContext } from "@/context/AuthProvider";
 const GoogleLoginButton = ({ language, idTrivia }) => {
 	const router = useRouter();
 
-	const { setToken, setUserId } = useAuthContext();
+	const { token, userId, setToken, setUserId } = useAuthContext();
 
 	const handleGoogleLoginSuccess = useCallback(
 		async (credentialResponse) => {
@@ -33,7 +33,6 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 						},
 					}
 				);
-				router.push(`/${language}/trivia/${idTrivia}`);
 
 				localStorage.setItem("token", response.data.token);
 				localStorage.setItem("userId", response.data.userid);
@@ -48,8 +47,20 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 		[router, language, idTrivia]
 	);
 
+	useEffect(() => {
+		console.log("token:", token);
+		console.log("userId:", userId);
+	}, [token, userId]);
+
+	function handleClick() {
+		return router.push(`/${language}/trivia/${idTrivia}`);
+	}
+
 	return (
-		<div className="w-full rounded-full shadow-md border border-gray-200 cursor-pointer">
+		<button
+			className="w-full rounded-full shadow-md border border-gray-200 cursor-pointer"
+			onClick={handleClick}
+		>
 			<GoogleLogin
 				onSuccess={handleGoogleLoginSuccess}
 				onError={() => {
@@ -57,7 +68,7 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 				}}
 				className="rounded-full w-full"
 			/>
-		</div>
+		</button>
 	);
 };
 
