@@ -9,7 +9,7 @@ import { useAuthContext } from "@/context/AuthProvider";
 const GoogleLoginButton = ({ language, idTrivia }) => {
 	const router = useRouter();
 
-	//const { setToken, setUserId } = useAuthContext();
+	const { setToken, setUserId } = useAuthContext();
 
 	const handleGoogleLoginSuccess = useCallback(
 		async (credentialResponse) => {
@@ -33,6 +33,11 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 						},
 					}
 				);
+				localStorage.setItem("token", response.data.token);
+				localStorage.setItem("userId", response.data.userid);
+
+				setToken(response.data.token);
+				setUserId(response.data.userid);
 
 				router.push(`/${language}/trivia/${idTrivia}`);
 			} catch (error) {
