@@ -33,13 +33,13 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 						},
 					}
 				);
+				router.push(`/${language}/trivia/${idTrivia}`);
+
 				localStorage.setItem("token", response.data.token);
 				localStorage.setItem("userId", response.data.userid);
 
 				setToken(response.data.token);
 				setUserId(response.data.userid);
-
-				router.push(`/${language}/trivia/${idTrivia}`);
 			} catch (error) {
 				console.error("Error al hacer la solicitud:", error);
 				throw error;
