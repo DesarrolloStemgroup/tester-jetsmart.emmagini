@@ -48,6 +48,7 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 
 				setToken(token);
 				setUserId(userid);
+				router.push(`/${language}/trivia/${idTrivia}`);
 
 				return { error, mensaje, token, userid };
 			} catch (error) {
@@ -57,11 +58,6 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 		},
 		[router, language, idTrivia]
 	);
-	useEffect(() => {
-		if (token && userId) {
-			router.push(`/${language}/trivia/${idTrivia}`);
-		}
-	}, [token, userId, router, language, idTrivia]);
 
 	return (
 		<button className="w-full rounded-full shadow-md border border-gray-200 cursor-pointer">
