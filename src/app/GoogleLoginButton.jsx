@@ -4,9 +4,12 @@ import { useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { GoogleLogin } from "@react-oauth/google";
 import axios from "axios";
+import { useAuthContext } from "@/context/AuthProvider";
 
 const GoogleLoginButton = ({ language, idTrivia }) => {
 	const router = useRouter();
+
+	const { setToken, setUserId } = useAuthContext();
 
 	const handleGoogleLoginSuccess = useCallback(
 		async (credentialResponse) => {
@@ -31,8 +34,19 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 					}
 				);
 
-				console.log("Login successful:", response.data);
+				const { token, userid, error, mensaje } = response.data;
+
+				if (error !== 0) {
+					return { error, mensaje };
+				}
+
+				localStorage.setItem(TOKEN_KEY, token);
+				localStorage.setItem(USER_ID_KEY, userid);
+
+				setToken(token);
+				setUserId(userid);
 				router.push(`/${language}/trivia/${idTrivia}`);
+				return { error, mensaje, token, userid };
 			} catch (error) {
 				console.error("Error al hacer la solicitud:", error);
 				throw error;
@@ -42,13 +56,13 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 	);
 
 	return (
-		<div className="flex flex-row gap-3 items-center justify-center rounded-full shadow-md border border-gray-200 cursor-pointer w-full">
+		<div className="w-full rounded-full shadow-md border border-gray-200 cursor-pointer">
 			<GoogleLogin
 				onSuccess={handleGoogleLoginSuccess}
 				onError={() => {
 					console.log("Login failed");
 				}}
-				className="flex flex-row gap-3 items-center justify-center rounded-full shadow-md border border-gray-200 cursor-pointer w-full"
+				className="rounded-full w-full"
 			/>
 		</div>
 	);
