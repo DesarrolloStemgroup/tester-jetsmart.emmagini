@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDataContext } from "@/context/DataProvider";
 import { Carousel } from "flowbite-react";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/home/NavBar";
 import CardHome from "@/components/cards/CardHome";
 import ButtonNav from "@/components/home/ButtonNav";
 

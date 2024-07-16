@@ -1,7 +1,7 @@
 "use client";
 
 import { useDataContext } from "@/context/DataProvider";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/home/NavBar";
 import ImageBanner from "../../components/home/ImageBanner";
 import Table from "@/components/home/Table";
 import "@/styles/styles.css";

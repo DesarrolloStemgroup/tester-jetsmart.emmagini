@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useDataContext } from "@/context/DataProvider";
-import NavBar from "@/components/NavBar";
 
 export default function Layout({
 	children,
@@ -13,7 +12,6 @@ export default function Layout({
 
 	return (
 		<main className="relative min-h-screen max-h-screen w-screen h-screen overscroll-none overflow-hidden bg-black">
-			<NavBar logo={empresa?.logo} showButton={true} />
 			<div className="absolute inset-0 z-0 w-[500px]">
 				<Image
 					className="object-center w-full h-full"

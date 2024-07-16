@@ -9,7 +9,7 @@ import { useDataContext } from "@/context/DataProvider";
 import ButtonNav from "@/components/home/ButtonNav";
 import { RoundButton } from "@/components/buttons/RoundButton";
 import Modal from "@/components/extras/Modal";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/home/NavBar";
 import "@/styles/styles.css";
 
 interface ComponentProps {

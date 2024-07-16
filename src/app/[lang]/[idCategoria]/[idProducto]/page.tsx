@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
 import Image from "next/image";
-import NavBar from "@/components/NavBar";
+import NavBar from "@/components/home/NavBar";
 import CardHome from "@/components/cards/CardHome";
 import { useDataContext } from "@/context/DataProvider";
 import { Carousel } from "flowbite-react";

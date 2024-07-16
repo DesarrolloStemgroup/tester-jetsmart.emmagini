@@ -12,11 +12,12 @@ import { useRouter } from "next/navigation";
 //import CleanLocalStorageOnUnmount from "@/app/app/truco/CleanLocalStorageOnUnmount";
 import { useAuthContext } from "@/context/AuthProvider";
 import { FaArrowLeft } from "react-icons/fa";
+import GoogleLoginButton from "@/app/GoogleLoginButton";
 
 export default function Page() {
 	const { signInWithGoogle } = useAuthContext();
-
 	const router = useRouter();
+	const idTrivia = "64776728-d5a0-11ee-a304-111c596b0bf7";
 
 	/*const onSignInWithGoogle = useCallback(async () => {
 		try {
@@ -27,7 +28,7 @@ export default function Page() {
 			console.log("Respuesta de inicio de sesión con Google:", result.user);
 			//console.log(result.user.accessToken);
 			//signInWithGoogle(result.user.accessToken);
-			router.push("/app");
+			router.push(`/${language}/trivia/${idTrivia}`)
 		} catch (error) {
 			console.error("Error al iniciar sesión con Google:", error);
 		}
@@ -49,6 +50,7 @@ export default function Page() {
 				</div>
 
 				<div className="w-full max-w-sm flex flex-col gap-5 items-center justify-center">
+					<GoogleLoginButton />
 					<Link className="w-full" href={"/auth/login/email"}>
 						<RoundButton
 							logo={<Mail className="text-white" size={20} />}

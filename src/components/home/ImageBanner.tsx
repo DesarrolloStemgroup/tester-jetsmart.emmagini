@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useDataContext } from "@/context/DataProvider";
 
 interface ImageBannerProps {
 	image: string;
@@ -22,6 +23,12 @@ export const ImageBanner = ({
 	buttonClassName,
 	buttonText,
 }: ImageBannerProps) => {
+	const router = useRouter();
+	const { language } = useDataContext();
+
+	const handleButtonTriviaClick = () => {
+		router.push(`/${language}/auth/login`);
+	};
 	return (
 		<div className="relative overflow-hidden mt-10 h-[400px]">
 			<div className="absolute inset-0">
@@ -46,13 +53,7 @@ export const ImageBanner = ({
 					</h3>
 					{button && (
 						<button
-							onClick={() =>
-								window.open(
-									link.startsWith("http") ? link : `https://${link}`,
-									"_blank",
-									"noopener,noreferrer"
-								)
-							}
+							onClick={handleButtonTriviaClick}
 							className={"w-full sm:w-[323px] h-12 bg-blueEmmagini mt-4 rounded-[50px] border-4 border-gray-300".concat(
 								" ",
 								buttonClassName || ""

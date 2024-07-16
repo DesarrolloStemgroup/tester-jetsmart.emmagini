@@ -1,11 +1,11 @@
 "use client";
 
-import { Inter } from "next/font/google";
+//import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
 import "./globals.css";
 import { DataProvider } from "@/context/DataProvider";
-import { AuthProvider } from "@/context/AuthProvider";
 
 const fonts = localFont({
 	src: [
@@ -68,6 +68,9 @@ const fonts = localFont({
 	variable: "--font-gilroy",
 });
 
+const clientId =
+	"861018734768-mm2f76o6bidnoplpck3i87vdm91vrbut.apps.googleusercontent.com";
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -76,9 +79,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${fonts.variable} font-sans`}>
-				<AuthProvider>
+				<GoogleOAuthProvider clientId={clientId}>
 					<DataProvider>{children}</DataProvider>
-				</AuthProvider>
+				</GoogleOAuthProvider>
 			</body>
 		</html>
 	);

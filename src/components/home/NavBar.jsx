@@ -1,11 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Lenguajes from "./extras/Lenguajes";
+import Lenguajes from "../extras/Lenguajes";
 import { useDataContext } from "@/context/DataProvider";
-import { RoundButton } from "./buttons/RoundButton";
+import { RoundButton } from "../buttons/RoundButton";
 
 //  TODO: Cambiar el INGRESAR del boton de la trivia por el texto que venga por api
 
@@ -42,14 +41,14 @@ const NavBar = ({ logo, showButton }) => {
 			<div className="flex items-center ml-auto gap-3">
 				<Lenguajes />
 
-				{showButton && (
+				{/*showButton && (
 					<RoundButton
 						buttonClassName="w-[135px] h-[30px] bg-white rounded-[50px] border-2 border-gray-300"
 						text="INGRESAR"
 						textClassName="text-blueEmmagini"
 						onClick={handleButtonTriviaClick}
 					/>
-				)}
+				)*/}
 			</div>
 		</div>
 	);
