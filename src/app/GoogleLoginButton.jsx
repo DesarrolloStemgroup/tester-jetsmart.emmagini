@@ -11,6 +11,9 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 
 	const { token, userId, setToken, setUserId } = useAuthContext();
 
+	const TOKEN_KEY = "token";
+	const USER_ID_KEY = "user_id";
+
 	const handleGoogleLoginSuccess = useCallback(
 		async (credentialResponse) => {
 			try {
