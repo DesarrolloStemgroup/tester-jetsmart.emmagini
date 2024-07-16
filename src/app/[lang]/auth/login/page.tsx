@@ -5,9 +5,6 @@ import Link from "next/link";
 import { RoundButton } from "@/components/buttons/RoundButton";
 import { CircleUser, Mail } from "lucide-react";
 import { useCallback } from "react";
-//import { signInWithPopup } from "firebase/auth";
-//import { firebaseAuth } from "@/config/firebase/firebase";
-//import { firebaseGoogleAuthProvider } from "@/config/firebase/google.provider";
 import { useRouter } from "next/navigation";
 //import CleanLocalStorageOnUnmount from "@/app/app/truco/CleanLocalStorageOnUnmount";
 import { useAuthContext } from "@/context/AuthProvider";
@@ -16,7 +13,6 @@ import { FaArrowLeft } from "react-icons/fa";
 import GoogleLoginButton from "@/app/GoogleLoginButton";
 
 export default function Page() {
-	const { signInWithGoogle } = useAuthContext();
 	const { language } = useDataContext();
 	const router = useRouter();
 	const idTrivia = "64776728-d5a0-11ee-a304-111c596b0bf7";
@@ -38,7 +34,9 @@ export default function Page() {
 				</div>
 
 				<div className="w-full max-w-sm flex flex-col gap-5 items-center justify-center">
-					<GoogleLoginButton language={language} idTrivia={idTrivia} />
+					<div className="w-full rounded-full h-full">
+						<GoogleLoginButton language={language} idTrivia={idTrivia} />
+					</div>
 					<Link className="w-full" href={"/auth/login/email"}>
 						<RoundButton
 							logo={<Mail className="text-white" size={20} />}

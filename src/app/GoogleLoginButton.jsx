@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { GoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import { useAuthContext } from "@/context/AuthProvider";
+import "../components/styles/buttonGoogle.css";
 
 const GoogleLoginButton = ({ language, idTrivia }) => {
 	const router = useRouter();
@@ -60,45 +61,14 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 	);
 
 	return (
-		<button className="w-full rounded-full shadow-md border border-gray-200 cursor-pointer">
-			<GoogleLogin
-				onSuccess={handleGoogleLoginSuccess}
-				onError={() => {
-					console.log("Login failed");
-				}}
-				className="rounded-full w-full"
-			/>
-		</button>
+		<GoogleLogin
+			onSuccess={handleGoogleLoginSuccess}
+			onError={() => {
+				console.log("Login failed");
+			}}
+			className="border border-sky-700 rounded-full w-full"
+		/>
 	);
 };
 
 export default GoogleLoginButton;
-
-/*const handleGoogleLoginSuccess = async (credentialResponse) => {
-		const data = {
-			host: "demo5.emmagini.com",
-			client_id: credentialResponse.clientId,
-			credential: credentialResponse.credential,
-			fcm_token: "",
-			es_app: "0",
-			id_plataforma: "3",
-			lang: "es",
-			timezone: "-3",
-		};
-
-		try {
-			const response = await axios.post(
-				"https://backend.emmagini.com/api2/google_login",
-				data,
-				{
-					headers: {
-						"Content-Type": "application/json",
-					},
-				}
-			);
-
-			console.log("Login successful:", response.data);
-		} catch (error) {
-			console.error("Error logging in:", error);
-		}
-	}; */
