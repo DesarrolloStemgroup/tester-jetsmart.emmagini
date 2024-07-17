@@ -26,7 +26,7 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 	const [isAnswerLoading, setIsAnswerLoading] = useState(false);
 	const [modalOpen, setModalOpen] = useState(false);
 	const [modalData, setModalData] = useState({ text: "", image: "" });
-
+	const [validateData, setValidateData] = useState();
 	const [videoData, setVideoData] = useState({
 		es_trivia: false,
 		id_video: "",
@@ -58,6 +58,8 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 					},
 				}
 			);
+
+			setValidateData(response.data);
 
 			return response.data;
 		} catch (error) {
@@ -254,7 +256,12 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 
 	return (
 		<>
-			<NavBar logo={empresa.logo} showButton={false} />
+			<NavBar
+				logo={empresa.logo}
+				showCoins={true}
+				// @ts-ignore
+				textCoins={validateData?.userdata?.monedas}
+			/>
 			<div className="flex flex-col lg:flex-row gap-10 pt-20 w-full max-w-[1300px] lg:h-screen overflow-hidden p-6 items-center mx-auto mt-6 pb-[190px]">
 				<div className="flex flex-col lg:gap-5 w-full lg:w-[705px]">
 					<Image

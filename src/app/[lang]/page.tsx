@@ -29,7 +29,7 @@ export default function Home() {
 
 	return (
 		<main>
-			<NavBar logo={empresa.logo} showButton={true} />
+			<NavBar logo={empresa.logo} />
 			{empresa.header_activo_landing === 1 && (
 				<ImageBanner
 					image={empresa.header_imagen}

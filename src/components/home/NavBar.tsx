@@ -5,10 +5,17 @@ import Image from "next/image";
 import Lenguajes from "../extras/Lenguajes";
 import { useDataContext } from "@/context/DataProvider";
 import { RoundButton } from "../buttons/RoundButton";
+import ConstantMovement from "@/components/animations/ConstantMovement";
+import logoCoin from "../../../public/assets/coin.png";
 
 //  TODO: Cambiar el INGRESAR del boton de la trivia por el texto que venga por api
 
-const NavBar = ({ logo, showButton }) => {
+interface ComponentProps {
+	logo: string;
+	showCoins?: boolean;
+	textCoins?: string;
+}
+const NavBar = ({ logo, showCoins, textCoins }: ComponentProps) => {
 	const { language } = useDataContext();
 	const router = useRouter();
 
@@ -41,14 +48,23 @@ const NavBar = ({ logo, showButton }) => {
 			<div className="flex items-center ml-auto gap-3">
 				<Lenguajes />
 
-				{/*showButton && (
-					<RoundButton
-						buttonClassName="w-[135px] h-[30px] bg-white rounded-[50px] border-2 border-gray-300"
-						text="INGRESAR"
-						textClassName="text-blueEmmagini"
-						onClick={handleButtonTriviaClick}
-					/>
-				)*/}
+				{showCoins && (
+					<div className=" w-[90px] h-[35px] lg:w-28 h-11 bg-white rounded-3xl flex items-center justify-center">
+						<ConstantMovement>
+							<Image
+								className="cursor-pointer w-[24px] h-[24px] lg:w-[28px] lg:h-[28px]"
+								src={logoCoin}
+								width={32}
+								height={32}
+								alt="coins"
+							/>
+						</ConstantMovement>
+
+						<span className="text-black font-semibold text-sm lg:text-base ml-2">
+							{textCoins}
+						</span>
+					</div>
+				)}
 			</div>
 		</div>
 	);

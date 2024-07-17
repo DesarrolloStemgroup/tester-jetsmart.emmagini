@@ -30,7 +30,7 @@ export const ImageBanner = ({
 		router.push(`/${language}/auth/login`);
 	};
 	return (
-		<div className="relative overflow-hidden mt-10 h-[400px]">
+		<div className="relative overflow-hidden mt-10 h-auto">
 			<div className="absolute inset-0">
 				<Image
 					src={image}

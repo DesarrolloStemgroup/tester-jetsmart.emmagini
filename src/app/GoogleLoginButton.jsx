@@ -67,6 +67,11 @@ const GoogleLoginButton = ({ language, idTrivia }) => {
 				console.log("Login failed");
 			}}
 			className="border border-sky-700 rounded-full w-full"
+			theme="outline"
+			size="large"
+			shape="rectangular"
+			text="continue_with"
+			logo_alignment="center"
 		/>
 	);
 };

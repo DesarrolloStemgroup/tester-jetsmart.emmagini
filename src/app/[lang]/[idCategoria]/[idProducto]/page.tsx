@@ -91,7 +91,7 @@ export default function Page({
 
 	return (
 		<>
-			<NavBar logo={empresa?.logo} showButton={true} />
+			<NavBar logo={empresa?.logo} />
 			<div className="flex justify-center">
 				<div className="w-[900px] px-4 sm:px-6 lg:px-8 mt-20 pb-20">
 					{landingData?.estructura
