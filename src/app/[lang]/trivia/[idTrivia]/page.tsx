@@ -27,6 +27,8 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 	const [modalOpen, setModalOpen] = useState(false);
 	const [modalData, setModalData] = useState({ text: "", image: "" });
 	const [validateData, setValidateData] = useState();
+	const [respuestasCorrectas, setRespuestasCorrectas] = useState(0);
+	const [respuestasIncorrectas, setRespuestasIncorrectas] = useState(0);
 	const [videoData, setVideoData] = useState({
 		es_trivia: false,
 		id_video: "",
@@ -183,7 +185,15 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 				const modalImage = isWrongAnswer
 					? fixImageUrl(empresa.bootbox_nook_image)
 					: fixImageUrl(empresa.bootbox_ok_image);
-				const modalText = isWrongAnswer ? `Opppss! ${mensaje}` : mensaje;
+				const modalText = isWrongAnswer
+					? `Opppss! ${mensaje}`
+					: "Felicidades! Has respondido correctamente";
+
+				if (isWrongAnswer) {
+					setRespuestasIncorrectas((prev) => prev + 1);
+				} else {
+					setRespuestasCorrectas((prev) => prev + 1);
+				}
 
 				setModalData({
 					image: modalImage,
@@ -204,10 +214,6 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 
 	const handleAnswerClick = (preguntaId: string, respuestaId: string) => {
 		getAnswerData(preguntaId, respuestaId);
-	};
-
-	const handleCardClick = () => {
-		router.back();
 	};
 
 	const handleModalClose = useCallback(async () => {
@@ -256,13 +262,12 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 
 	return (
 		<>
-			<NavBar
-				logo={empresa.logo}
-				showCoins={true}
-				// @ts-ignore
-				textCoins={validateData?.userdata?.monedas}
-			/>
-			<div className="flex flex-col lg:flex-row gap-10 pt-20 w-full max-w-[1300px] lg:h-screen overflow-hidden p-6 items-center mx-auto mt-6 pb-[190px]">
+			<NavBar logo={empresa.logo} showCoins={false} />
+			<h4 className="mt-[100px] text-center align-middle ">
+				Sesión actual: Respuesta correctas: {respuestasCorrectas} - Respuestas
+				incorrectas: {respuestasIncorrectas}
+			</h4>
+			<div className="flex flex-col lg:flex-row gap-10  w-full max-w-[1300px] lg:h-screen overflow-hidden p-2 items-center mx-auto mt-4 pb-[190px]">
 				<div className="flex flex-col lg:gap-5 w-full lg:w-[705px]">
 					<Image
 						// @ts-ignore
