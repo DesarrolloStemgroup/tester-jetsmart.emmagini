@@ -263,11 +263,16 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 	return (
 		<>
 			<NavBar logo={empresa.logo} showCoins={false} />
-			<h4 className="mt-[100px] text-center align-middle ">
-				Sesión actual: Respuesta correctas: {respuestasCorrectas} - Respuestas
+			<h4 className="hidden md:block mt-[100px] text-center align-middle">
+				Sesión actual: Respuesta correctas: {respuestasCorrectas}- Respuestas
 				incorrectas: {respuestasIncorrectas}
 			</h4>
-			<div className="flex flex-col lg:flex-row gap-10  w-full max-w-[1300px] lg:h-screen overflow-hidden p-2 items-center mx-auto mt-4 pb-[190px]">
+			<h4 className="sm:block md:hidden lg:hidden xl:hidden 2xl:hidden mt-[100px] text-center align-middle">
+				Sesión actual: <br /> Respuesta correctas: {respuestasCorrectas} <br />
+				Respuestas incorrectas: {respuestasIncorrectas}
+			</h4>
+
+			<div className="flex flex-col lg:flex-row gap-10  w-full max-w-[1300px] lg:h-screen overflow-hidden p-2 items-center mx-auto  pb-[190px]">
 				<div className="flex flex-col lg:gap-5 w-full lg:w-[705px]">
 					<Image
 						// @ts-ignore
