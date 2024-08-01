@@ -10,6 +10,7 @@ interface RoundButtonProps {
 	onClick?: () => void;
 	isDisabled?: boolean;
 	type?: "button" | "submit" | "reset";
+	id?: string;
 }
 
 export const RoundButton = ({
@@ -20,9 +21,11 @@ export const RoundButton = ({
 	textClassName,
 	buttonClassName,
 	type = "button",
+	id,
 }: RoundButtonProps) => {
 	return (
 		<button
+			id={id}
 			onClick={onClick}
 			type={type}
 			className={"flex flex-row gap-3 items-center justify-center rounded-full shadow-md border border-gray-200 cursor-pointer"

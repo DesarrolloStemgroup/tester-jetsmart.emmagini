@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDataContext } from "@/context/DataProvider";
+import withAuth from "@/app/withAuth";
 import { Carousel } from "flowbite-react";
 import NavBar from "@/components/home/NavBar";
 import CardHome from "@/components/cards/CardHome";
@@ -18,7 +19,7 @@ interface ComponentProps {
 	};
 }
 
-export default function Page({ params: { idCategoria } }: ComponentProps) {
+function Page({ params: { idCategoria } }: ComponentProps) {
 	const { landing, empresa, language } = useDataContext();
 	const router = useRouter();
 
@@ -115,3 +116,4 @@ export default function Page({ params: { idCategoria } }: ComponentProps) {
 		</>
 	);
 }
+export default withAuth(Page);

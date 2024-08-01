@@ -34,9 +34,9 @@ export default function Page() {
 				</div>
 
 				<div className="w-full max-w-sm flex flex-col gap-5 items-center justify-center">
-					<div className="w-full rounded-full h-full">
+					{/*<div className="w-full rounded-full h-full">
 						<GoogleLoginButton language={language} idTrivia={idTrivia} />
-					</div>
+					</div> */}
 					<Link className="w-full" href={"/auth/login/email"}>
 						<RoundButton
 							logo={<Mail className="text-white" size={20} />}
@@ -46,14 +46,14 @@ export default function Page() {
 						/>
 					</Link>
 
-					<Link className="w-full" href={"/auth/sign-up"}>
+					{/*<Link className="w-full" href={"/auth/sign-up"}>
 						<RoundButton
 							logo={<CircleUser className="text-white" size={20} />}
 							text={"Crea una cuenta nueva"}
 							buttonClassName="border border-sky-500 bg-blueEmmagini py-4 px-8 w-full"
 							textClassName="text-white"
 						/>
-					</Link>
+					</Link> */}
 				</div>
 
 				<div className="w-full flex flex-row items-center justify-center">
@@ -65,7 +65,7 @@ export default function Page() {
 					</p>*/}
 				</div>
 
-				<div className="flex justify-center items-center">
+				{/*<div className="flex justify-center items-center">
 					<RoundButton
 						logo={<FaArrowLeft size={18} className="text-blueEmmagini" />}
 						text={"Volver"}
@@ -73,7 +73,7 @@ export default function Page() {
 						textClassName="text-blueEmmagini"
 						onClick={handleCardClick}
 					/>
-				</div>
+				</div> */}
 			</div>
 		</>
 	);

@@ -1,0 +1,226 @@
+{
+	"trivia julio": {
+		"title": "El aterrizaje de la cultura",
+		"description": "Trivia sobre las maravillas naturales de Sudamérica.",
+		"image": "https://backend.emmagini.com/uploads/landing/2c6871488cc45a1ad92f9bf7470887b3/3ad1f20a-33f5-11ef-b964-fa163ef884a2.jpeg",
+		"id": "julio",
+		"questions": [
+			{
+				"id": "p1",
+				"question": "¿Cuál es el río más largo de Sudamérica y el segundo más largo del mundo?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/66ddb965-3ba7-11ef-b964-fa163ef884a2.png",
+				"options": [
+					{
+						"id": "a1",
+						"text": "Río Orinoco",
+						"correct": false
+					},
+					{
+						"id": "b1",
+						"text": "Río Amazonas",
+						"correct": true
+					},
+					{
+						"id": "c1",
+						"text": "Río Paraná",
+						"correct": false
+					},
+					{
+						"id": "d1",
+						"text": "Río Loa",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p2",
+				"question": "¿En qué país se encuentra la región de los Pantanos de Iberá, uno de los humedales más grandes del mundo?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/8e6a15b2-3ba7-11ef-b964-fa163ef884a2.png",
+				"options": [
+					{
+						"id": "a2",
+						"text": "En Paraguay",
+						"correct": false
+					},
+					{
+						"id": "b2",
+						"text": "En Brasil",
+						"correct": false
+					},
+					{
+						"id": "c2",
+						"text": "En Colombia",
+						"correct": false
+					},
+					{
+						"id": "d2",
+						"text": "En Argentina",
+						"correct": true
+					}
+				]
+			},
+			{
+				"id": "p3",
+				"question": "¿Qué isla sudamericana es famosa por su diversidad única de especies y es considerada uno de los destinos más importantes para la observación de vida silvestre?",
+				"image": "https://backend.emmagini.com/uploads//preguntas/b8306507-3ba7-11ef-b964-fa163ef884a2.jpeg",
+				"options": [
+					{
+						"id": "a3",
+						"text": "Isla de Pascua",
+						"correct": false
+					},
+					{
+						"id": "b3",
+						"text": "Las Islas Galápagos",
+						"correct": true
+					},
+					{
+						"id": "c3",
+						"text": "Ilha Grande",
+						"correct": false
+					},
+					{
+						"id": "d3",
+						"text": "Isla Santay",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p4",
+				"question": "¿Dónde se encuentran las Cataratas del Iguazú, una de las cascadas más impresionantes del mundo y declaradas Patrimonio de la Humanidad por la UNESCO?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/66ddb965-3ba7-11ef-b964-fa163ef884a2.png",
+				"options": [
+					{
+						"id": "a4",
+						"text": "Se encuentran en la frontera entre Argentina y Brasil",
+						"correct": true
+					},
+					{
+						"id": "b4",
+						"text": "Están dentro del Amazonas",
+						"correct": false
+					},
+					{
+						"id": "c4",
+						"text": "Se encuentran en la selva de Colombia",
+						"correct": false
+					},
+					{
+						"id": "d4",
+						"text": "Están ubicadas en Uruguay",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p5",
+				"question": "¿Cuál es el nombre de la montaña más alta de Colombia, ubicada en la Sierra Nevada de Santa Marta?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/5bc88e6c-3ba6-11ef-b964-fa163ef884a2.png",
+				"options": [
+					{
+						"id": "a5",
+						"text": "Pico Simón Bolívar",
+						"correct": false
+					},
+					{
+						"id": "b5",
+						"text": "Nevado del Huila",
+						"correct": false
+					},
+					{
+						"id": "c5",
+						"text": "Pico Cristóbal Colón",
+						"correct": true
+					},
+					{
+						"id": "d5",
+						"text": "Pico La Reina",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p6",
+				"question": "¿Cuál es el volcán más alto del mundo?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/8e6a15b2-3ba7-11ef-b964-fa163ef884a2.png",
+				"options": [
+					{
+						"id": "a6",
+						"text": "Monte Ojos del Salado, ubicado en la frontera entre Chile y Argentina",
+						"correct": true
+					},
+					{
+						"id": "b6",
+						"text": "Huascarán, ubicado en la Cordillera Blanca de Perú",
+						"correct": false
+					},
+					{
+						"id": "c6",
+						"text": "Incahuasi, en la frontera de Chile y Argentina",
+						"correct": false
+					},
+					{
+						"id": "d6",
+						"text": "Tres Cruces, ubicado en la frontera de Chile y Argentina",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p7",
+				"question": "¿Cuál es la selva tropical más extensa del mundo, que se extiende por nueve países de Sudamérica?",
+				"image": "https://backend.emmagini.com/uploads//preguntas/b8306507-3ba7-11ef-b964-fa163ef884a2.jpeg",
+				"options": [
+					{
+						"id": "a7",
+						"text": "Las Yungas",
+						"correct": false
+					},
+					{
+						"id": "b7",
+						"text": "Parque Nacional del Yasuní",
+						"correct": false
+					},
+					{
+						"id": "c7",
+						"text": "La selva del Podocarpus",
+						"correct": false
+					},
+					{
+						"id": "d7",
+						"text": "La selva amazónica",
+						"correct": true
+					}
+				]
+			},
+			{
+				"id": "p8",
+				"question": "¿Cuál es el nombre del parque nacional ubicado en Argentina que alberga una de las mayores colonias de pingüinos de Magallanes?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/66ddb965-3ba7-11ef-b964-fa163ef884a2.png",
+				"options": [
+					{
+						"id": "a8",
+						"text": "Parque Nacional Nahuel Huapi",
+						"correct": false
+					},
+					{
+						"id": "b8",
+						"text": "Parque Nacional Tierra del Fuego",
+						"correct": true
+					},
+					{
+						"id": "c8",
+						"text": "Parque Nacional Los Glaciares",
+						"correct": false
+					},
+					{
+						"id": "d8",
+						"text": "Parque Nacional Perito Moreno",
+						"correct": false
+					}
+				]
+			}
+		]
+	}
+}

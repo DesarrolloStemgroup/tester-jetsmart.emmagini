@@ -46,7 +46,7 @@ export default function Page() {
 			if (result) {
 				// @ts-ignore
 				if (result.error === 0) {
-					router.push(`/${language}/trivia/${idTrivia}`);
+					router.push(`/${language}`);
 				} else {
 					// @ts-ignore
 					setError(result.mensaje);
@@ -144,7 +144,7 @@ export default function Page() {
 					textClassName="text-white"
 				/>
 			</form>
-
+			{/*
 			<div className="w-full flex flex-row items-center justify-center">
 				<p className="text-gray-400 font-regular text-center text-md">
 					Todavia no tienes una cuenta? Registrate{" "}
@@ -152,7 +152,7 @@ export default function Page() {
 						<Link href="../sign-up">acá</Link>
 					</span>
 				</p>
-			</div>
+			</div> */}
 			<div className="flex justify-center items-center">
 				<RoundButton
 					logo={<FaArrowLeft size={18} className="text-blueEmmagini" />}

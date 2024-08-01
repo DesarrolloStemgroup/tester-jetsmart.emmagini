@@ -8,7 +8,7 @@ interface ImageBannerProps {
 	title?: string;
 	subtitle?: string;
 	button?: boolean;
-	link: string;
+	link?: string;
 	buttonClassName?: string;
 	buttonText?: string;
 }
@@ -26,8 +26,10 @@ export const ImageBanner = ({
 	const router = useRouter();
 	const { language } = useDataContext();
 
+	const idTrivia = "64776728-d5a0-11ee-a304-111c596b0bf7";
+
 	const handleButtonTriviaClick = () => {
-		router.push(`/${language}/auth/login`);
+		router.push(`/${language}/trivia`);
 	};
 	return (
 		<div className="relative overflow-hidden mt-10 h-auto">

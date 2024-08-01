@@ -1,0 +1,164 @@
+{
+	"trivia agosto": {
+		"title": "El aterrizaje de la cultura",
+		"description": "Prepara tu portugués: siete frases que te ayudarán a disfrutar tus días en Brasil.",
+		"image": "https://backend.emmagini.com/uploads/albums/64776728-d5a0-11ee-a304-111c596b0bf7//f6215741-2274-11ef-b964-fa163ef884a2.jpeg",
+		"id": "agosto",
+		"questions": [
+			{
+				"id": "p1",
+				"question": "Partamos por lo más básico: Bom dia / Boa tarde, como vai? Você fala espanhol?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/66ddb965-3ba7-11ef-b964-fa163ef884a2.png",
+				"options": [
+					{
+						"id": "a1",
+						"text": "Buenos días, ¿me podría traducir al español?",
+						"correct": false
+					},
+					{
+						"id": "b1",
+						"text": "Buenos días / Buenas tardes, ¿cómo estás? ¿Hablas español?",
+						"correct": true
+					},
+					{
+						"id": "c1",
+						"text": "Buenas tardes, ¿cómo amaneció hoy?",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p2",
+				"question": "Si tienes hambre y quieres saber qué comer: Podería trazer o cardapio, por favor?",
+				"image": "https://backend.emmagini.com/uploads//preguntas/b8306507-3ba7-11ef-b964-fa163ef884a2.jpeg",
+				"options": [
+					{
+						"id": "a2",
+						"text": "¿Me ayudaría con una tarea, por favor?",
+						"correct": false
+					},
+					{
+						"id": "b2",
+						"text": "¿Me podría decir el clima de hoy, por favor?",
+						"correct": false
+					},
+					{
+						"id": "c2",
+						"text": "¿Podría traerme la carta (menú), por favor?",
+						"correct": true
+					}
+				]
+			},
+			{
+				"id": "p3",
+				"question": "Si necesitas reservar una pieza de hotel: Ola, você tem quartos livres? Eu gostaria de ficar aquí uma noite.",
+				"image": "/assets/trivia/imagenes-preguntas/imagen3.png",
+				"options": [
+					{
+						"id": "a3",
+						"text": "Hola, ¿hay habitaciones disponibles? Me gustaría quedarme aquí una noche.",
+						"correct": true
+					},
+					{
+						"id": "b3",
+						"text": "Hola, ¿usted está libre para salir a bailar?",
+						"correct": false
+					},
+					{
+						"id": "c3",
+						"text": "Hola, ¿cuánto sale la habitación del hotel?",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p4",
+				"question": "Si estás pensando en ir a la playa: Será que hoje vai dar praia?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/8e6a15b2-3ba7-11ef-b964-fa163ef884a2.png",
+				"options": [
+					{
+						"id": "a4",
+						"text": "¿Hay playa en este lugar?",
+						"correct": false
+					},
+					{
+						"id": "b4",
+						"text": "¿Tú crees que habrá playa hoy?",
+						"correct": true
+					},
+					{
+						"id": "c4",
+						"text": "¿A cuánto queda la playa?",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p5",
+				"question": "Tus básicos de viaje: Lembrar de não esquecer o protetor solar, a garrafinha de água e uma roupa bem confortável.",
+				"image": "https://backend.emmagini.com/uploads/preguntas/5bc88e6c-3ba6-11ef-b964-fa163ef884a2.png",
+				"options": [
+					{
+						"id": "a5",
+						"text": "Recuerda no olvidar protector solar, una botella de agua y ropa cómoda.",
+						"correct": true
+					},
+					{
+						"id": "b5",
+						"text": "Te vas a quemar si no tienes protector, gorro y agua.",
+						"correct": false
+					},
+					{
+						"id": "c5",
+						"text": "En este lugar el sol quema mucho si no te cuidas y no tomas agua.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p6",
+				"question": "Si estás pensando en salir de fiesta: Que tal um sambinha hoje à noite?",
+				"image": "https://backend.emmagini.com/uploads//preguntas/b8306507-3ba7-11ef-b964-fa163ef884a2.jpeg",
+				"options": [
+					{
+						"id": "a6",
+						"text": "¿Cómo puedo llegar al lugar donde bailan samba?",
+						"correct": false
+					},
+					{
+						"id": "b6",
+						"text": "¿Podrías poner samba en la radio?",
+						"correct": false
+					},
+					{
+						"id": "c6",
+						"text": "¿Qué tal una fiesta de samba esta noche?",
+						"correct": true
+					}
+				]
+			},
+			{
+				"id": "p7",
+				"question": "Te enamoraste de Brasil, así que tendrás que volver: Quero uma passagem de ida e volta para Río de Janeiro.",
+				"image": "https://backend.emmagini.com/uploads/preguntas/66ddb965-3ba7-11ef-b964-fa163ef884a2.png",
+				"options": [
+					{
+						"id": "a7",
+						"text": "No quiero volver nunca más a Río de Janeiro.",
+						"correct": false
+					},
+					{
+						"id": "b7",
+						"text": "Quiero un pasaje de ida y vuelta a Río de Janeiro.",
+						"correct": true
+					},
+					{
+						"id": "c7",
+						"text": "Mi viaje a Río de Janeiro estuvo muy bueno.",
+						"correct": false
+					}
+				]
+			}
+		]
+	}
+}

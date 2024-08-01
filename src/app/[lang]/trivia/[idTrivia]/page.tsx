@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 
 import { useCallback, useState, useEffect } from "react";
 import Image from "next/image";
@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import axios from "axios";
 import { useAuthContext } from "@/context/AuthProvider";
 import { useDataContext } from "@/context/DataProvider";
+import withAuth from "@/app/withAuth";
 import ButtonNav from "@/components/home/ButtonNav";
 import { RoundButton } from "@/components/buttons/RoundButton";
 import Modal from "@/components/extras/Modal";
@@ -296,6 +297,7 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 
 									{pregunta.respuestas.map((respuesta: any, index: any) => (
 										<RoundButton
+											id={`${pregunta.id}-${respuesta.id}`} // Agrega esta línea
 											buttonClassName="w-full h-[48px] bg-white rounded-[50px] border-2 border-gray-300 mb-6"
 											text={respuesta.texto}
 											key={index}
@@ -307,18 +309,210 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 								</div>
 						  ))
 						: null}
+					<RoundButton
+						buttonClassName="w-full h-[48px] bg-blueEmmagini rounded-[50px] border-2 border-gray-300 mb-6 text-white "
+						text={"Siguiente"}
+						onClick={() => {
+							handleModalClose();
+						}}
+					/>
 				</div>
-				<Modal
+				{/*<Modal
 					text={modalData.text}
 					isOpen={modalOpen}
 					textButton="Siguiente"
 					onClick={handleModalClose}
 					image={modalData.image}
-				/>
+				/> }
 			</div>
 			<ButtonNav />
 		</>
 	);
 }
 
-export default Trivia;
+export default withAuth(Trivia); */
+
+"use client";
+
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import withAuth from "@/app/withAuth";
+import { useDataContext } from "@/context/DataProvider";
+import ButtonNav from "@/components/home/ButtonNav";
+import { RoundButton } from "@/components/buttons/RoundButton";
+import NavBar from "@/components/home/NavBar";
+import "@/styles/styles.css";
+import triviaJulio from "@/utilities/trivia-julio.json";
+import triviaAgosto from "@/utilities/trivia-agosto.json";
+
+interface ComponentProps {
+	params: {
+		lang: string;
+		idTrivia: string;
+	};
+}
+
+function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
+	const router = useRouter();
+
+	const { empresa } = useDataContext();
+	const [triviaData, setTriviaData] = useState<any>(null);
+	const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
+	const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
+	const [correctOptionId, setCorrectOptionId] = useState<string | null>(null);
+	const [answered, setAnswered] = useState<boolean>(false);
+	const [correctAnswers, setCorrectAnswers] = useState<number>(0);
+	const [incorrectAnswers, setIncorrectAnswers] = useState<number>(0);
+	const [quizFinished, setQuizFinished] = useState<boolean>(false);
+
+	useEffect(() => {
+		const triviaMap: any = {
+			julio: triviaJulio["trivia julio"],
+			agosto: triviaAgosto["trivia agosto"],
+		};
+
+		const selectedTrivia = triviaMap[idTrivia];
+		if (selectedTrivia) {
+			setTriviaData(selectedTrivia);
+		} else {
+			console.error("Trivia no encontrada");
+			router.push("/");
+		}
+	}, [idTrivia, router]);
+
+	const handleOptionClick = (optionId: string, isCorrect: boolean) => {
+		if (answered) return;
+
+		setSelectedOptionId(optionId);
+		setCorrectOptionId(
+			currentQuestion.options.find((option: any) => option.correct)?.id
+		);
+
+		if (isCorrect) {
+			setCorrectAnswers((prev) => prev + 1);
+		} else {
+			setIncorrectAnswers((prev) => prev + 1);
+		}
+
+		setAnswered(true);
+	};
+
+	const handleNextQuestion = () => {
+		setCurrentQuestionIndex((prevIndex) => {
+			const newIndex = prevIndex + 1;
+			if (newIndex >= triviaData.questions.length) {
+				setQuizFinished(true);
+				return prevIndex;
+			}
+			return newIndex;
+		});
+		setSelectedOptionId(null);
+		setCorrectOptionId(null);
+		setAnswered(false);
+	};
+
+	if (!triviaData) {
+		return (
+			<div className="mt-20 text-black">
+				<div className="mt-96">
+					<section className="dots-container">
+						<div className="dot"></div>
+						<div className="dot"></div>
+						<div className="dot"></div>
+						<div className="dot"></div>
+						<div className="dot"></div>
+					</section>
+					<h1 className="text-blueEmmagini text-center mt-4 font-semibold">
+						CARGANDO
+					</h1>
+				</div>
+			</div>
+		);
+	}
+
+	const currentQuestion = triviaData.questions[currentQuestionIndex];
+
+	return (
+		<>
+			<div className="flex flex-col lg:flex-row gap-10 w-full max-w-[1300px] lg:h-screen overflow-hidden p-2 items-center mx-auto pb-[190px] mt-20">
+				<div className="flex flex-col lg:gap-5 w-full lg:w-[705px]">
+					<Image
+						src={currentQuestion.image}
+						alt="Pregunta"
+						className="mx-auto"
+						width={400}
+						height={500}
+					/>
+				</div>
+				<div className="w-full lg:w-[537px] md:h-[542px] flex flex-col gap-5 pb-[80px]">
+					{quizFinished ? (
+						<div className="flex flex-col items-center mt-20">
+							<h2 className="text-xl text-center mb-6">Resultados</h2>
+							<p className="text-lg mb-4">
+								Respuestas Correctas: {correctAnswers}
+							</p>
+							<p className="text-lg mb-4">
+								Respuestas Incorrectas: {incorrectAnswers}
+							</p>
+							<RoundButton
+								buttonClassName="w-full h-[48px] bg-blueEmmagini rounded-[50px] border-2 border-gray-300 mb-6 text-white"
+								text="Volver"
+								onClick={() => router.push(`/${lang}/trivia/`)}
+							/>
+						</div>
+					) : (
+						<>
+							{currentQuestion && (
+								<div className="h-full flex flex-col justify-center items-center">
+									<h2 className="text-xl text-center mb-6">
+										{currentQuestion.question}
+									</h2>
+
+									{currentQuestion.options.map((option: any) => {
+										let buttonClassName =
+											"w-full h-[48px] bg-white rounded-[50px] border-2 border-gray-300 mb-6";
+
+										if (answered) {
+											if (option.id === correctOptionId) {
+												buttonClassName =
+													"w-full h-[48px] bg-green-500 rounded-[50px] border-2 border-gray-300 mb-6 text-white";
+											} else if (option.id === selectedOptionId) {
+												buttonClassName =
+													"w-full h-[48px] bg-red-500 rounded-[50px] border-2 border-gray-300 mb-6 text-white";
+											}
+										}
+
+										return (
+											<RoundButton
+												id={`${currentQuestion.id}-${option.id}`}
+												buttonClassName={buttonClassName}
+												text={option.text}
+												key={option.id}
+												onClick={() =>
+													handleOptionClick(option.id, option.correct)
+												}
+												// @ts-ignore
+												disabled={answered}
+											/>
+										);
+									})}
+								</div>
+							)}
+							<RoundButton
+								buttonClassName="w-full h-[48px] bg-blueEmmagini rounded-[50px] border-2 border-gray-300 mb-6 text-white"
+								text="Siguiente"
+								onClick={handleNextQuestion}
+								// @ts-ignore
+								disabled={!answered}
+							/>
+						</>
+					)}
+				</div>
+			</div>
+			<ButtonNav />
+		</>
+	);
+}
+
+export default withAuth(Trivia);

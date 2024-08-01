@@ -1,13 +1,14 @@
 "use client";
 
 import { useDataContext } from "@/context/DataProvider";
+import withAuth from "../withAuth";
 import NavBar from "@/components/home/NavBar";
 import ImageBanner from "../../components/home/ImageBanner";
 import Table from "@/components/home/Table";
-import "@/styles/styles.css";
 import ButtonNav from "@/components/home/ButtonNav";
+import "@/styles/styles.css";
 
-export default function Home() {
+function Home() {
 	const { data, empresa, language } = useDataContext();
 
 	if (!empresa && !data) {
@@ -37,7 +38,6 @@ export default function Home() {
 					title={empresa.header_2}
 					subtitle={empresa.header_contenido}
 					button={true}
-					link={empresa.header_destino}
 					buttonText={data.keytext.btn_header_mas}
 				/>
 			)}
@@ -47,3 +47,5 @@ export default function Home() {
 		</main>
 	);
 }
+
+export default withAuth(Home);

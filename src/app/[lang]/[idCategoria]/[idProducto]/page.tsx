@@ -1,10 +1,11 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useMemo } from "react";
+import { useDataContext } from "@/context/DataProvider";
+import withAuth from "@/app/withAuth";
 import Image from "next/image";
 import NavBar from "@/components/home/NavBar";
 import CardHome from "@/components/cards/CardHome";
-import { useDataContext } from "@/context/DataProvider";
 import { Carousel } from "flowbite-react";
 import WhileTap from "@/components/animations/WhileTap";
 import ButtonNav from "@/components/home/ButtonNav";
@@ -18,9 +19,7 @@ interface ComponentProps {
 	};
 }
 
-export default function Page({
-	params: { idCategoria, idProducto, lang },
-}: ComponentProps) {
+function Page({ params: { idCategoria, idProducto, lang } }: ComponentProps) {
 	const { landing, empresa } = useDataContext();
 	const router = useRouter();
 
@@ -219,3 +218,5 @@ export default function Page({
 		</>
 	);
 }
+
+export default withAuth(Page);

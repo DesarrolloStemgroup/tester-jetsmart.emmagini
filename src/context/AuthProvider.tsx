@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
 						password: password,
 						repassword: confirmPassword,
 						lang: "es",
-						host: "demo5.emmagini.com",
+						host: "demo9.emmagini.com",
 						timezone: -3,
 						fcm_token: "",
 					},
@@ -90,7 +90,7 @@ export const AuthProvider = ({ children }) => {
 						fcm_token: "",
 						id_plataforma: 3,
 						lang: "es",
-						host: "demo5.emmagini.com",
+						host: "demo9.emmagini.com",
 					},
 					{
 						headers: {
@@ -144,7 +144,7 @@ export const AuthProvider = ({ children }) => {
 			const response = await axios.post(
 				"https://backend.emmagini.com/api2/google_login",
 				{
-					host: "demo23.emmagini.com",
+					host: "demo9.emmagini.com",
 					client_id:
 						"861018734768-mm2f76o6bidnoplpck3i87vdm91vrbut.apps.googleusercontent.com",
 					credential: credential,
