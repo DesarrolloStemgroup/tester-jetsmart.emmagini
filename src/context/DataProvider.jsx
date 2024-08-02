@@ -21,9 +21,9 @@ export const DataProvider = ({ children }) => {
 	const getAppData = useCallback(async (lang) => {
 		const isEsLa = lang === "es-la";
 		const callbackUrl = isEsLa
-			? "https://demo5.emmagini.com/landing.php#"
-			: "https://demo6.emmagini.com/landing.php#";
-		const hostUrl = isEsLa ? "demo5.emmagini.com" : "demo6.emmagini.com";
+			? "https://demo9.emmagini.com/landing.php#"
+			: "https://demo9.emmagini.com/landing.php#";
+		const hostUrl = isEsLa ? "demo9.emmagini.com" : "demo9.emmagini.com";
 
 		try {
 			const response = await axios.post(
@@ -65,7 +65,7 @@ export const DataProvider = ({ children }) => {
 			const response = await axios.post(
 				"https://backend.emmagini.com/api2/gettheme",
 				{
-					host: "demo6.emmagini.com",
+					host: "demo9.emmagini.com",
 					lang: "es",
 				},
 				{

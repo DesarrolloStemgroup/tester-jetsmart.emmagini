@@ -49,10 +49,10 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 			const response = await axios.post(
 				"https://backend.emmagini.com/api2/validate",
 				{
-					callback: `https://demo5.emmagini.com/home.php#v=album&id=${idTrivia}`,
+					callback: `https://demo9.emmagini.com/home.php#v=album&id=${idTrivia}`,
 					token: token,
 					userid: userId,
-					host: "demo5.emmagini.com",
+					host: "demo9.emmagini.com",
 					lang: "es",
 				},
 				{
@@ -79,8 +79,8 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 					token: token,
 					userid: userId,
 					id: idTrivia,
-					host: "demo5.emmagini.com",
-					callback: "https://demo5.emmagini.com/home.php#v=inicio",
+					host: "demo9.emmagini.com",
+					callback: "https://demo9.emmagini.com/home.php#v=inicio",
 					lang: "es",
 				},
 				{
@@ -105,8 +105,8 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 					token: token,
 					userid: userId,
 					id: idTrivia,
-					host: "demo5.emmagini.com",
-					callback: "https://demo5.emmagini.com/home.php#v=inicio",
+					host: "demo9.emmagini.com",
+					callback: "https://demo9.emmagini.com/home.php#v=inicio",
 					lang: "es",
 					trivia: "1",
 				},
@@ -161,10 +161,10 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 					id_album: idTrivia,
 					id_video: videoData.id,
 					sequencia: "0",
-					host: "demo5.emmagini.com",
+					host: "demo9.emmagini.com",
 					lang: "es",
 					trivia: "true",
-					callback: `https://demo5.emmagini.com/home.php#v=album&id=${idTrivia}`,
+					callback: `https://demo9.emmagini.com/home.php#v=album&id=${idTrivia}`,
 					token: token,
 					userid: userId,
 				};
