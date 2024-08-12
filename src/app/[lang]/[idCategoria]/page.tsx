@@ -78,7 +78,7 @@ function Page({ params: { idCategoria } }: ComponentProps) {
 									<Image
 										src={fixImageUrl(auspiciante.ruta)}
 										alt={`product image ${auspiciante.id}`}
-										className="w-full h-full object-cover"
+										className="w-full h-full object-contain"
 										layout="fill"
 									/>
 								</div>

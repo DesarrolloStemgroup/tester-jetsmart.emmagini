@@ -144,15 +144,14 @@ export default function Page() {
 					textClassName="text-white"
 				/>
 			</form>
-			{/*
-			<div className="w-full flex flex-row items-center justify-center">
-				<p className="text-gray-400 font-regular text-center text-md">
-					Todavia no tienes una cuenta? Registrate{" "}
-					<span className="text-blue-400 hover:text-blue-500">
-						<Link href="../sign-up">acá</Link>
-					</span>
-				</p>
-			</div> */}
+			{/* <div className="w-full flex flex-row items-center justify-center">
+					<p className="text-gray-400 font-regular text-center text-md">
+						Todavia no tienes una cuenta? Registrate{" "}
+						<span className="text-blue-400 hover:text-blue-500">
+							<Link href="../sign-up">acá</Link>
+						</span>
+					</p>
+				</div> */}
 			<div className="flex justify-center items-center">
 				<RoundButton
 					logo={<FaArrowLeft size={18} className="text-blueEmmagini" />}
