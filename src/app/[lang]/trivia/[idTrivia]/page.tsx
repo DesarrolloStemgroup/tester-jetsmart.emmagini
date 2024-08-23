@@ -336,6 +336,7 @@ export default withAuth(Trivia); */
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import withAuth from "@/app/withAuth";
 import { useDataContext } from "@/context/DataProvider";
@@ -437,13 +438,15 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 		<>
 			<div className="flex flex-col lg:flex-row gap-10 w-full max-w-[1300px] lg:h-screen overflow-hidden p-2 items-center mx-auto pb-[190px] mt-20">
 				<div className="flex flex-col lg:gap-5 w-full lg:w-[705px]">
-					<Image
-						src={currentQuestion.image}
-						alt="Pregunta"
-						className="mx-auto"
-						width={400}
-						height={500}
-					/>
+					<Link href={currentQuestion.link} target="_blank">
+						<Image
+							src={currentQuestion.image}
+							alt="Pregunta"
+							className="mx-auto"
+							width={400}
+							height={500}
+						/>
+					</Link>
 				</div>
 				<div className="w-full lg:w-[537px] md:h-[542px] flex flex-col gap-5 pb-[80px]">
 					{quizFinished ? (
