@@ -75,12 +75,14 @@ function Page({ params: { idCategoria } }: ComponentProps) {
 						<Carousel className="w-full h-full">
 							{categoria.auspiciantes.map((auspiciante: any, imgIndex: any) => (
 								<div key={imgIndex} className="w-full h-full relative">
-									<Image
-										src={fixImageUrl(auspiciante.ruta)}
-										alt={`product image ${auspiciante.id}`}
-										className="w-full h-full object-contain"
-										layout="fill"
-									/>
+									<Link href={auspiciante.link} target="_blank'">
+										<Image
+											src={fixImageUrl(auspiciante.ruta)}
+											alt={`product image ${auspiciante.id}`}
+											className="w-full h-full object-contain"
+											layout="fill"
+										/>
+									</Link>
 								</div>
 							))}
 						</Carousel>
