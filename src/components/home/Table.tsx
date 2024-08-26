@@ -11,8 +11,8 @@ function Table() {
 
 	const categorias = landing && landing.length > 0 ? landing[0].categorias : [];
 
-	function fixImageUrl(url: string) {
-		if (url.startsWith("//")) {
+	function fixImageUrl(url: string | undefined) {
+		if (typeof url === "string" && url.startsWith("//")) {
 			return `https:${url}`;
 		}
 		return url;
