@@ -436,15 +436,15 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 
 	return (
 		<>
-			<div className="flex flex-col lg:flex-row gap-10 w-full max-w-[1300px] lg:h-screen overflow-hidden p-2 items-center mx-auto pb-[190px] mt-20">
+			<div className="flex flex-col lg:flex-row gap-10 w-full max-w-[1300px] lg:h-screen overflow-hidden items-center mx-auto pb-[190px] mt-24">
 				<div className="flex flex-col lg:gap-5 w-full lg:w-[705px]">
 					<Link href={currentQuestion.link} target="_blank">
 						<Image
 							src={currentQuestion.image}
 							alt="Pregunta"
 							className="mx-auto"
-							width={400}
-							height={500}
+							width={350}
+							height={600}
 						/>
 					</Link>
 				</div>
@@ -468,7 +468,7 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 						<>
 							{currentQuestion && (
 								<div className="h-full flex flex-col justify-center items-center">
-									<h2 className="text-xl text-center mb-6">
+									<h2 className="text-xl text-center mb-6 mt-20">
 										{currentQuestion.question}
 									</h2>
 
