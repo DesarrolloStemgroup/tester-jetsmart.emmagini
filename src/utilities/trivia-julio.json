@@ -9,6 +9,7 @@
 				"id": "p1",
 				"question": "¿Cuál es el río más largo de Sudamérica y el segundo más largo del mundo?",
 				"image": "https://backend.emmagini.com/uploads/preguntas/66ddb965-3ba7-11ef-b964-fa163ef884a2.png",
+				"link": "https://iclick.travel/",
 				"options": [
 					{
 						"id": "a1",
@@ -35,7 +36,8 @@
 			{
 				"id": "p2",
 				"question": "¿En qué país se encuentra la región de los Pantanos de Iberá, uno de los humedales más grandes del mundo?",
-				"image": "https://backend.emmagini.com/uploads/preguntas/8e6a15b2-3ba7-11ef-b964-fa163ef884a2.png",
+				"image": "https://backend.emmagini.com/uploads/preguntas/b8306507-3ba7-11ef-b964-fa163ef884a2.jpeg",
+				"link": "https://gamaleasing.cl/?utm_source=google&utm_medium=cpc&utm_campaign=lop-search&campaignid=8793069832&adgroupid=88869084215&adid=658209210436&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNX36KQvVLEkeQ2zeNl8b7An5oys_i5BRWl7-sqHRiVAHyYxhJ9cJMaAtIPEALw_wcB",
 				"options": [
 					{
 						"id": "a2",
@@ -62,7 +64,8 @@
 			{
 				"id": "p3",
 				"question": "¿Qué isla sudamericana es famosa por su diversidad única de especies y es considerada uno de los destinos más importantes para la observación de vida silvestre?",
-				"image": "https://backend.emmagini.com/uploads//preguntas/b8306507-3ba7-11ef-b964-fa163ef884a2.jpeg",
+				"image": "https://backend.emmagini.com/uploads/preguntas/8e6a15b2-3ba7-11ef-b964-fa163ef884a2.png",
+				"link": "https://www.fantasilandia.cl/",
 				"options": [
 					{
 						"id": "a3",
@@ -89,7 +92,8 @@
 			{
 				"id": "p4",
 				"question": "¿Dónde se encuentran las Cataratas del Iguazú, una de las cascadas más impresionantes del mundo y declaradas Patrimonio de la Humanidad por la UNESCO?",
-				"image": "https://backend.emmagini.com/uploads/preguntas/66ddb965-3ba7-11ef-b964-fa163ef884a2.png",
+				"image": "https://backend.emmagini.com/uploads/preguntas/8e6a15b2-3ba7-11ef-b964-fa163ef884a2.png",
+				"link": "https://www.fantasilandia.cl/",
 				"options": [
 					{
 						"id": "a4",
@@ -117,6 +121,7 @@
 				"id": "p5",
 				"question": "¿Cuál es el nombre de la montaña más alta de Colombia, ubicada en la Sierra Nevada de Santa Marta?",
 				"image": "https://backend.emmagini.com/uploads/preguntas/5bc88e6c-3ba6-11ef-b964-fa163ef884a2.png",
+				"link": "https://ticketmaster.cl/",
 				"options": [
 					{
 						"id": "a5",
@@ -143,7 +148,8 @@
 			{
 				"id": "p6",
 				"question": "¿Cuál es el volcán más alto del mundo?",
-				"image": "https://backend.emmagini.com/uploads/preguntas/8e6a15b2-3ba7-11ef-b964-fa163ef884a2.png",
+				"image": "https://backend.emmagini.com/uploads//preguntas/b8306507-3ba7-11ef-b964-fa163ef884a2.jpeg",
+				"link": "https://gamaleasing.cl/?utm_source=google&utm_medium=cpc&utm_campaign=lop-search&campaignid=8793069832&adgroupid=88869084215&adid=658209210436&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNX36KQvVLEkeQ2zeNl8b7An5oys_i5BRWl7-sqHRiVAHyYxhJ9cJMaAtIPEALw_wcB",
 				"options": [
 					{
 						"id": "a6",
@@ -170,7 +176,8 @@
 			{
 				"id": "p7",
 				"question": "¿Cuál es la selva tropical más extensa del mundo, que se extiende por nueve países de Sudamérica?",
-				"image": "https://backend.emmagini.com/uploads//preguntas/b8306507-3ba7-11ef-b964-fa163ef884a2.jpeg",
+				"image": "https://backend.emmagini.com/uploads/preguntas/66ddb965-3ba7-11ef-b964-fa163ef884a2.png",
+				"link": "https://iclick.travel/",
 				"options": [
 					{
 						"id": "a7",
@@ -197,7 +204,8 @@
 			{
 				"id": "p8",
 				"question": "¿Cuál es el nombre del parque nacional ubicado en Argentina que alberga una de las mayores colonias de pingüinos de Magallanes?",
-				"image": "https://backend.emmagini.com/uploads/preguntas/66ddb965-3ba7-11ef-b964-fa163ef884a2.png",
+				"image": "https://backend.emmagini.com/uploads/preguntas/b8306507-3ba7-11ef-b964-fa163ef884a2.jpeg",
+				"link": "https://gamaleasing.cl/?utm_source=google&utm_medium=cpc&utm_campaign=lop-search&campaignid=8793069832&adgroupid=88869084215&adid=658209210436&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNX36KQvVLEkeQ2zeNl8b7An5oys_i5BRWl7-sqHRiVAHyYxhJ9cJMaAtIPEALw_wcB",
 				"options": [
 					{
 						"id": "a8",
