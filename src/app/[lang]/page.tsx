@@ -41,7 +41,7 @@ function Home() {
 		<main>
 			<NavBar logo={empresa.logo} />
 			{empresa.header_activo_landing === 1 && (
-				<Link href={`/${language}/auth/login`} className="block mt-20">
+				<Link href={`/${language}/trivia`} className="block mt-20">
 					<div className="mt-20 w-full relative">
 						<div className="relative w-full lg:max-h-[600px]">
 							<Image
