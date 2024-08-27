@@ -43,12 +43,11 @@ function Home() {
 			{empresa.header_activo_landing === 1 && (
 				<Link href={`/${language}/auth/login`} className="block mt-20">
 					<div className="mt-20 w-full relative">
-						<div className="relative w-full lg:max-h-[500px]">
+						<div className="relative w-full lg:max-h-[600px]">
 							<Image
 								src={banner}
 								alt="Banner"
-								className="w-full h-full object-fill"
-								layout="fill"
+								className="w-full h-auto object-cover"
 							/>
 						</div>
 					</div>
