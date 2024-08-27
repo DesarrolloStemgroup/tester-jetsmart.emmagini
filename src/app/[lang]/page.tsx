@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useDataContext } from "@/context/DataProvider";
 import withAuth from "../withAuth";
 import NavBar from "@/components/home/NavBar";
@@ -7,9 +10,15 @@ import ImageBanner from "../../components/home/ImageBanner";
 import Table from "@/components/home/Table";
 import ButtonNav from "@/components/home/ButtonNav";
 import "@/styles/styles.css";
+import banner from "../../../public/assets/banner.jpeg";
 
 function Home() {
 	const { data, empresa, language } = useDataContext();
+	const router = useRouter();
+
+	const handleButtonTriviaClick = () => {
+		router.push(`/${language}/auth/login`);
+	};
 
 	if (!empresa && !data) {
 		return (
@@ -32,14 +41,18 @@ function Home() {
 		<main>
 			<NavBar logo={empresa.logo} />
 			{empresa.header_activo_landing === 1 && (
-				<ImageBanner
-					image={empresa.header_imagen}
-					welcomeText={empresa.header_1}
-					title={empresa.header_2}
-					subtitle={empresa.header_contenido}
-					button={true}
-					buttonText={data.keytext.btn_header_mas}
-				/>
+				<Link href={`/${language}/auth/login`} className="block mt-20">
+					<div className="mt-20 w-full relative">
+						<div className="relative w-full lg:max-h-[500px]">
+							<Image
+								src={banner}
+								alt="Banner"
+								className="w-full h-full object-fill"
+								layout="fill"
+							/>
+						</div>
+					</div>
+				</Link>
 			)}
 
 			<Table />

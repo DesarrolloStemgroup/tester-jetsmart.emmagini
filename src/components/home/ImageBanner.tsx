@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import { useDataContext } from "@/context/DataProvider";
 
 interface ImageBannerProps {
-	image: string;
+	image: any;
 	welcomeText?: string;
 	title?: string;
 	subtitle?: string;
