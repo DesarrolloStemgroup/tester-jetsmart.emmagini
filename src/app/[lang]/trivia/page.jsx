@@ -10,6 +10,7 @@ import WhileTap from "@/components/animations/WhileTap";
 import "@/styles/styles.css";
 import triviaJulio from "@/utilities/trivia-julio.json";
 import triviaAgosto from "@/utilities/trivia-agosto.json";
+import triviaSeptiembre from "@/utilities/trivia-septiembre.json";
 
 function Page() {
 	const { landing, empresa } = useDataContext();
@@ -27,6 +28,12 @@ function Page() {
 			image: triviaAgosto["trivia agosto"].image,
 			id: triviaAgosto["trivia agosto"].id,
 			description: triviaAgosto["trivia agosto"].description,
+		},
+		{
+			title: triviaSeptiembre["trivia septiembre"].title,
+			image: triviaSeptiembre["trivia septiembre"].image,
+			id: triviaSeptiembre["trivia septiembre"].id,
+			description: triviaSeptiembre["trivia septiembre"].description,
 		},
 	];
 

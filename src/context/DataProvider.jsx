@@ -57,9 +57,12 @@ export const DataProvider = ({ children }) => {
 	}, [getAppData, language]);
 
 	useEffect(() => {
-		console.log(empresa);
+		console.log("empresa", empresa);
 	}, [empresa]);
 
+	useEffect(() => {
+		console.log("data", data);
+	}, [data]);
 	const getThemeData = useCallback(async () => {
 		try {
 			const response = await axios.post(

@@ -1,0 +1,194 @@
+{
+	"trivia septiembre": {
+		"title": "El aterrizaje de la cultura",
+		"description": "Trivia del mes de septiembre",
+		"image": "https://backend.emmagini.com/uploads/landing/2c6871488cc45a1ad92f9bf7470887b3/3ad1f20a-33f5-11ef-b964-fa163ef884a2.jpeg",
+		"id": "septiembre",
+		"questions": [
+			{
+				"id": "p1",
+				"question": "¿De qué país proviene la cumbia?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/66ddb965-3ba7-11ef-b964-fa163ef884a2.png",
+				"link": "https://iclick.travel/",
+				"options": [
+					{
+						"id": "a1",
+						"text": "Colombia",
+						"correct": true
+					},
+					{
+						"id": "b1",
+						"text": "Venezuela",
+						"correct": false
+					},
+					{
+						"id": "c1",
+						"text": "Perú",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p2",
+				"question": "¿Qué género musical es conocido como la \"música de los llanos\" en Venezuela y Colombia?",
+				"image": "https://backend.emmagini.com//uploads/preguntas/e7dff217-693e-11ef-bfca-fa163ef884a2.jpeg",
+				"link": "https://gamaleasing.cl/?utm_source=google&utm_medium=cpc&utm_campaign=lop-search&campaignid=8793069832&adgroupid=88869084215&adid=658209210436&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNX36KQvVLEkeQ2zeNl8b7An5oys_i5BRWl7-sqHRiVAHyYxhJ9cJMaAtIPEALw_wcB",
+				"options": [
+					{
+						"id": "a2",
+						"text": "Vallenato",
+						"correct": false
+					},
+					{
+						"id": "b2",
+						"text": "Bachata",
+						"correct": false
+					},
+					{
+						"id": "c2",
+						"text": "Joropo",
+						"correct": true
+					}
+				]
+			},
+			{
+				"id": "p3",
+				"question": "¿Qué instrumento es característico en la música andina de Perú y Bolivia?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/8e6a15b2-3ba7-11ef-b964-fa163ef884a2.png",
+				"link": "https://www.fantasilandia.cl/",
+				"options": [
+					{
+						"id": "a3",
+						"text": "Maracas",
+						"correct": false
+					},
+					{
+						"id": "b3",
+						"text": "Guitarra eléctrica",
+						"correct": false
+					},
+					{
+						"id": "c3",
+						"text": "Charango",
+						"correct": true
+					}
+				]
+			},
+			{
+				"id": "p4",
+				"question": "¿Qué baile tradicional chileno, declarado Patrimonio Cultural, es muy similar al cortejo de un gallo y una gallina?",
+				"image": "https://backend.emmagini.com//uploads//preguntas////d8dc6f73-693e-11ef-bfca-fa163ef884a2.jpeg",
+				"link": "https://www.fantasilandia.cl/",
+				"options": [
+					{
+						"id": "a4",
+						"text": "Cueca",
+						"correct": true
+					},
+					{
+						"id": "b4",
+						"text": "Zamba",
+						"correct": false
+					},
+					{
+						"id": "c4",
+						"text": "Milonga",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p5",
+				"question": "¿Qué género musical originario de Colombia es conocido por su uso del acordeón y sus historias románticas y costumbristas?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/d8dc6f73-693e-11ef-bfca-fa163ef884a2.jpeg",
+				"link": "https://ticketmaster.cl/",
+				"options": [
+					{
+						"id": "a5",
+						"text": "Cumbia",
+						"correct": false
+					},
+					{
+						"id": "b5",
+						"text": "Reggaetón",
+						"correct": false
+					},
+					{
+						"id": "c5",
+						"text": "Vallenato",
+						"correct": true
+					}
+				]
+			},
+			{
+				"id": "p6",
+				"question": "¿Cuál es el género de música tradicional de los Andes, que suele interpretarse con zampoña?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/e7dff217-693e-11ef-bfca-fa163ef884a2.jpeg",
+				"link": "https://gamaleasing.cl/?utm_source=google&utm_medium=cpc&utm_campaign=lop-search&campaignid=8793069832&adgroupid=88869084215&adid=658209210436&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNX36KQvVLEkeQ2zeNl8b7An5oys_i5BRWl7-sqHRiVAHyYxhJ9cJMaAtIPEALw_wcB",
+				"options": [
+					{
+						"id": "a6",
+						"text": "Huayno",
+						"correct": true
+					},
+					{
+						"id": "b6",
+						"text": "Salsa",
+						"correct": false
+					},
+					{
+						"id": "c6",
+						"text": "Samba",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p7",
+				"question": "¿Qué danza folclórica brasileña se celebra durante el Carnaval de Brasil?",
+				"image": "https://backend.emmagini.com/uploads/preguntas/66ddb965-3ba7-11ef-b964-fa163ef884a2.png",
+				"link": "https://iclick.travel/",
+				"options": [
+					{
+						"id": "a7",
+						"text": "Bachata",
+						"correct": false
+					},
+					{
+						"id": "b7",
+						"text": "Samba",
+						"correct": true
+					},
+					{
+						"id": "c7",
+						"text": "Bossa nova",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p8",
+				"question": "¿Cuál es el origen del tango?",
+				"image": "https://backend.emmagini.com//uploads//preguntas////e7dff217-693e-11ef-bfca-fa163ef884a2.jpeg",
+				"link": "https://gamaleasing.cl/?utm_source=google&utm_medium=cpc&utm_campaign=lop-search&campaignid=8793069832&adgroupid=88869084215&adid=658209210436&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNX36KQvVLEkeQ2zeNl8b7An5oys_i5BRWl7-sqHRiVAHyYxhJ9cJMaAtIPEALw_wcB",
+				"options": [
+					{
+						"id": "a8",
+						"text": "Brasil.",
+						"correct": false
+					},
+					{
+						"id": "b8",
+						"text": "Argentina y Uruguay",
+						"correct": true
+					},
+					{
+						"id": "c8",
+						"text": "Colombia",
+						"correct": false
+					}
+				]
+			}
+		]
+	}
+}

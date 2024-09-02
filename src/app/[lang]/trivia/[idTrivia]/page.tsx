@@ -342,10 +342,10 @@ import withAuth from "@/app/withAuth";
 import { useDataContext } from "@/context/DataProvider";
 import ButtonNav from "@/components/home/ButtonNav";
 import { RoundButton } from "@/components/buttons/RoundButton";
-import NavBar from "@/components/home/NavBar";
-import "@/styles/styles.css";
 import triviaJulio from "@/utilities/trivia-julio.json";
 import triviaAgosto from "@/utilities/trivia-agosto.json";
+import triviaSeptiembre from "@/utilities/trivia-septiembre.json";
+import "@/styles/styles.css";
 
 interface ComponentProps {
 	params: {
@@ -358,6 +358,7 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 	const router = useRouter();
 
 	const { empresa } = useDataContext();
+
 	const [triviaData, setTriviaData] = useState<any>(null);
 	const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
 	const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
@@ -371,6 +372,7 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 		const triviaMap: any = {
 			julio: triviaJulio["trivia julio"],
 			agosto: triviaAgosto["trivia agosto"],
+			septiembre: triviaSeptiembre["trivia septiembre"],
 		};
 
 		const selectedTrivia = triviaMap[idTrivia];
@@ -443,7 +445,7 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 							src={currentQuestion.image}
 							alt="Pregunta"
 							className="mx-auto"
-							width={350}
+							width={500}
 							height={600}
 						/>
 					</Link>
