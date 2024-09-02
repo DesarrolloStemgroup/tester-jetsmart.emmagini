@@ -22,8 +22,8 @@ export const DataProvider = ({ children }) => {
 		const isEsLa = lang === "es-la";
 		const callbackUrl = isEsLa
 			? "https://demo9.emmagini.com/landing.php#"
-			: "https://demo9.emmagini.com/landing.php#";
-		const hostUrl = isEsLa ? "demo9.emmagini.com" : "demo9.emmagini.com";
+			: "https://demo10.emmagini.com/landing.php#";
+		const hostUrl = isEsLa ? "demo9.emmagini.com" : "demo10.emmagini.com";
 
 		try {
 			const response = await axios.post(
