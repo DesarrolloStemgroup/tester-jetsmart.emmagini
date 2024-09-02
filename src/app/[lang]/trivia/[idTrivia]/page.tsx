@@ -345,6 +345,7 @@ import { RoundButton } from "@/components/buttons/RoundButton";
 import triviaJulio from "@/utilities/trivia-julio.json";
 import triviaAgosto from "@/utilities/trivia-agosto.json";
 import triviaSeptiembre from "@/utilities/trivia-septiembre.json";
+import { FaInstagram } from "react-icons/fa";
 import "@/styles/styles.css";
 
 interface ComponentProps {
@@ -450,14 +451,33 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 						/>
 					</Link>
 				</div>
-				<div className="w-full lg:w-[537px] md:h-[542px] flex flex-col gap-5 pb-[80px]">
+				<div className="w-full lg:w-[537px] md:h-[742px] flex flex-col gap-5 pb-[80px]">
 					{quizFinished ? (
-						<div className="flex flex-col items-center mt-20">
-							<h2 className="text-xl text-center mb-6">Resultados</h2>
-							<p className="text-lg mb-4">
+						<div className="flex flex-col items-center lg:mt-20">
+							<p className="text-base md:text-xl text-center  md:mb-6 lg:mt-10 font-bold">
+								Ya estás participando!
+							</p>
+							<p className=" text-base md:text-lg">
+								{" "}
+								<br></br>Te invitamos a seguirnos en Instagram:{" "}
+							</p>
+							<Link
+								href="https://www.instagram.com/deviajetravel"
+								className="text-blueEmmagini text-lg flex items-center mt-6"
+								target="_blank"
+							>
+								<FaInstagram size={18} className="text-black mr-2" />
+								<span className="text-base md:text-xl">@deviajetravel</span>
+							</Link>
+							<br></br>
+							para conocer al ganador!
+							<h2 className=" text-base md:text-xl text-center mb-4 font-bold md:mt-6">
+								Resultados
+							</h2>
+							<p className=" text-base md:text-lg mb-4">
 								Respuestas Correctas: {correctAnswers}
 							</p>
-							<p className="text-lg mb-4">
+							<p className=" text-base md:text-lg mb-4">
 								Respuestas Incorrectas: {incorrectAnswers}
 							</p>
 							<RoundButton
@@ -469,8 +489,8 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 					) : (
 						<>
 							{currentQuestion && (
-								<div className="h-full flex flex-col justify-center items-center">
-									<h2 className="text-xl text-center mb-6 mt-20">
+								<div className="h-full flex flex-col justify-center items-center h-auto">
+									<h2 className="text-xl text-center mb-6 mt-4">
 										{currentQuestion.question}
 									</h2>
 
@@ -505,7 +525,7 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 								</div>
 							)}
 							<RoundButton
-								buttonClassName="w-full h-[48px] bg-blueEmmagini rounded-[50px] border-2 border-gray-300 mb-6 text-white"
+								buttonClassName="w-full h-[48px] bg-blueEmmagini rounded-[50px] border-2 border-gray-300 text-white"
 								text="Siguiente"
 								onClick={handleNextQuestion}
 								// @ts-ignore
