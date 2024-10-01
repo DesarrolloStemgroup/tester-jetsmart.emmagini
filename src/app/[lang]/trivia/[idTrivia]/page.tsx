@@ -345,6 +345,7 @@ import { RoundButton } from "@/components/buttons/RoundButton";
 import triviaJulio from "@/utilities/trivia-julio.json";
 import triviaAgosto from "@/utilities/trivia-agosto.json";
 import triviaSeptiembre from "@/utilities/trivia-septiembre.json";
+import triviaOctubre from "@/utilities/trivia-octubre.json";
 import { FaInstagram } from "react-icons/fa";
 import "@/styles/styles.css";
 
@@ -374,6 +375,7 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 			julio: triviaJulio["trivia julio"],
 			agosto: triviaAgosto["trivia agosto"],
 			septiembre: triviaSeptiembre["trivia septiembre"],
+			octubre: triviaOctubre["trivia octubre"],
 		};
 
 		const selectedTrivia = triviaMap[idTrivia];
