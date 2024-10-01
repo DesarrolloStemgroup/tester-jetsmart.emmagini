@@ -1,7 +1,7 @@
 {
 	"trivia octubre": {
 		"title": "El aterrizaje de la cultura",
-		"description": "Test de conocimiento sobre la música y el baile en Latinoamérica.",
+		"description": "Desafíos de geografía: ¿Puedes ubicar estas maravillas naturales de Brasil?",
 		"image": "https://backend.emmagini.com/uploads/landing/804519dc57565e91c5d0e26700ff2b3a/3886585f-74e4-11ef-bfca-fa163ef884a2.jpeg",
 		"id": "octubre",
 		"questions": [
@@ -54,7 +54,7 @@
 			{
 				"id": "p3",
 				"question": "El Pantanal es la mayor extensión de humedales tropicales del mundo. Este paraíso para los amantes de la naturaleza ofrece algunos de los mejores avistamientos de vida silvestre en Brasil, ¿sabes dónde queda?",
-				"image": "https://backend.emmagini.com/uploads/preguntas/071bded1-6f80-11ef-bfca-fa163ef884a2.jpeg",
+				"image": "https://backend.emmagini.com/uploads/preguntas/8c461e9b-8035-11ef-bfca-fa163ef884a2.jpeg",
 				"link": "https://www.marriott.com/es/hotels/smrmc-santa-marta-marriott-resort-playa-dormida/overview/?cid=DIS_GLB0005VI0_GLE000DQ71_GLF000VBHX",
 				"options": [
 					{
@@ -77,7 +77,7 @@
 			{
 				"id": "p4",
 				"question": "El Parque Estatal Jaraguá es considerado Patrimonio de la Humanidad por la UNESCO, ya que alberga los últimos restos de bosques atlánticos en una determinada región de Brasil, ¿adivinas cuál es?",
-				"image": "https://backend.emmagini.com/uploads/preguntas/d8dc6f73-693e-11ef-bfca-fa163ef884a2.jpeg",
+				"image": "https://backend.emmagini.com/uploads/preguntas/7133089b-8038-11ef-bfca-fa163ef884a2.png",
 				"link": "https://ticketmaster.cl/",
 				"options": [
 					{
@@ -100,8 +100,8 @@
 			{
 				"id": "p5",
 				"question": "Brasil cuenta con un hermoso archipiélago llamado Fernando de Noronha, que se presenta como un santuario ecológico lejos del bullicio. ¿Lo sabrías ubicar en el mapa?",
-				"image": "https://backend.emmagini.com//uploads/preguntas/e7dff217-693e-11ef-bfca-fa163ef884a2.jpeg",
-				"link": "https://gamaleasing.cl/?utm_source=google&utm_medium=cpc&utm_campaign=lop-search&campaignid=8793069832&adgroupid=88869084215&adid=658209210436&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNX36KQvVLEkeQ2zeNl8b7An5oys_i5BRWl7-sqHRiVAHyYxhJ9cJMaAtIPEALw_wcB",
+				"image": "https://backend.emmagini.com/uploads/preguntas/c8cc070f-8037-11ef-bfca-fa163ef884a2.png",
+				"link": "www.reservategualda.cl",
 				"options": [
 					{
 						"id": "a5",

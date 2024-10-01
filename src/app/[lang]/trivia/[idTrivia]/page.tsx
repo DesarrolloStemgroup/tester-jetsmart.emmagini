@@ -113,7 +113,7 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 						<Image
 							src={currentQuestion.image}
 							alt="Pregunta"
-							className="mx-auto"
+							className="mx-auto max-h-[550px]"
 							width={500}
 							height={600}
 						/>
@@ -164,15 +164,15 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 
 									{currentQuestion.options.map((option: any) => {
 										let buttonClassName =
-											"w-full h-[48px] bg-white rounded-[50px] border-2 border-gray-300 mb-6";
+											"w-full h-[48px] bg-white rounded-[50px] border-2 border-gray-300 mb-6 p-4";
 
 										if (answered) {
 											if (option.id === correctOptionId) {
 												buttonClassName =
-													"w-full h-[48px] bg-green-500 rounded-[50px] border-2 border-gray-300 mb-6 text-white";
+													"w-full h-[48px] bg-green-500 rounded-[50px] border-2 border-gray-300 mb-6 text-white p-4";
 											} else if (option.id === selectedOptionId) {
 												buttonClassName =
-													"w-full h-[48px] bg-red-500 rounded-[50px] border-2 border-gray-300 mb-6 text-white";
+													"w-full h-[48px] bg-red-500 rounded-[50px] border-2 border-gray-300 mb-6 text-white p-4";
 											}
 										}
 
@@ -292,7 +292,7 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 				{
 					token: token,
 					userid: userId,
-					id: idTrivia,
+					id: "64776728-d5a0-11ee-a304-111c596b0bf7",
 					host: "demo9.emmagini.com",
 					callback: "https://demo9.emmagini.com/home.php#v=inicio",
 					lang: "es",
@@ -318,7 +318,7 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 				{
 					token: token,
 					userid: userId,
-					id: idTrivia,
+					id: "64776728-d5a0-11ee-a304-111c596b0bf7",
 					host: "demo9.emmagini.com",
 					callback: "https://demo9.emmagini.com/home.php#v=inicio",
 					lang: "es",
@@ -372,7 +372,7 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 
 			try {
 				const requestBody: { [key: string]: any } = {
-					id_album: idTrivia,
+					id_album: "64776728-d5a0-11ee-a304-111c596b0bf7",
 					id_video: videoData.id,
 					sequencia: "0",
 					host: "demo9.emmagini.com",
@@ -531,17 +531,19 @@ function Trivia({ params: { idTrivia } }: ComponentProps) {
 						}}
 					/>
 				</div>
-				{/*<Modal
-					text={modalData.text}
-					isOpen={modalOpen}
-					textButton="Siguiente"
-					onClick={handleModalClose}
-					image={modalData.image}
-				/> }
+				{
+					<Modal
+						text={modalData.text}
+						isOpen={modalOpen}
+						textButton="Siguiente"
+						onClick={handleModalClose}
+						image={modalData.image}
+					/>
+				}
 			</div>
 			<ButtonNav />
 		</>
 	);
 }
 
-export default withAuth(Trivia); */
+export default withAuth(Trivia);*/
