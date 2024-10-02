@@ -11,6 +11,8 @@ import Table from "@/components/home/Table";
 import ButtonNav from "@/components/home/ButtonNav";
 import "@/styles/styles.css";
 import banner from "../../../public/assets/banner.jpeg";
+import bannerChile from "../../../public/assets/banner-chile.png";
+import bannerArgentina from "../../../public/assets/banner-argentina.png";
 
 function Home() {
 	const { data, empresa, language } = useDataContext();
@@ -45,7 +47,7 @@ function Home() {
 					<div className="mt-20 w-full relative">
 						<div className="relative w-full lg:max-h-[600px]">
 							<Image
-								src={banner}
+								src={language === "es-la" ? bannerChile : bannerArgentina}
 								alt="Banner"
 								className="w-full h-auto object-cover"
 							/>
