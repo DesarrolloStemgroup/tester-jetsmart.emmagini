@@ -12,6 +12,7 @@ import triviaJulio from "@/utilities/trivia-julio.json";
 import triviaAgosto from "@/utilities/trivia-agosto.json";
 import triviaSeptiembre from "@/utilities/trivia-septiembre.json";
 import triviaOctubre from "@/utilities/trivia-octubre.json";
+import triviaNoviembre from "@/utilities/trivia-noviembre.json";
 
 function Page() {
 	const { landing, empresa } = useDataContext();
@@ -41,6 +42,12 @@ function Page() {
 			image: triviaOctubre["trivia octubre"].image,
 			id: triviaOctubre["trivia octubre"].id,
 			description: triviaOctubre["trivia octubre"].description,
+		},
+		{
+			title: triviaNoviembre["trivia noviembre"].title,
+			image: triviaNoviembre["trivia noviembre"].image,
+			id: triviaNoviembre["trivia noviembre"].id,
+			description: triviaNoviembre["trivia noviembre"].description,
 		},
 	];
 
