@@ -9,8 +9,8 @@ import NavBar from "@/components/home/NavBar";
 import Table from "@/components/home/Table";
 import ButtonNav from "@/components/home/ButtonNav";
 import banner from "../../../public/assets/banner.png";
-import bannerChile from "../../../public/assets/banner-chile.png";
-import bannerArgentina from "../../../public/assets/banner-argentina.png";
+import bannerChile from "../../../public/assets/banner-chile.jpg";
+import bannerArgentina from "../../../public/assets/banner-argentina.jpg";
 import "@/styles/styles.css";
 
 function Home() {
@@ -46,7 +46,7 @@ function Home() {
 					<div className="mt-20 w-full relative">
 						<div className="relative w-full lg:max-h-[600px]">
 							<Image
-								src={language === "es-la" ? banner : banner}
+								src={language === "es-la" ? bannerChile : bannerArgentina}
 								alt="Banner"
 								className="w-full h-auto object-cover"
 							/>

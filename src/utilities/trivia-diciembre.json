@@ -1,14 +1,14 @@
 {
 	"trivia diciembre": {
 		"title": "El aterrizaje de la cultura",
-		"description": "Gastronomía regional: adivina a qué plato típico sudamericano corresponde cada foto.",
-		"image": "https://backend.emmagini.com/uploads/landing/c58c0fc60a8fe0fae09c9c607d8f6626//C0D2237B-DAA7-4F07-A19C-204CF4E335EE.jpeg",
+		"description": "Nuestra región es increíblemente rica en variedad gastronómica. ¡Nos encanta probar la comida local y tradicional de cada país latinoamericano! Y debido a nuestro espíritu hambriento, queremos ponerte a prueba para que veamos cuánto sabes sobre los platos típicos de la gastronomía sudamericana. ¡Allá vamos!",
+		"image": "https://backend.emmagini.com/uploads/landing/6e2f35882529045762475555af9a5754/22ADA5D7-0FE4-4BDA-94C3-58561AB9DD44.png",
 		"id": "diciembre",
 		"questions": [
 			{
 				"id": "p1",
 				"question": "¿Cuál es el nombre de este plato preparado con maíz, envuelto en hojas y relleno con carne o queso?",
-				"image": "https://backend.emmagini.com//uploads/preguntas/e7dff217-693e-11ef-bfca-fa163ef884a2.jpeg",
+				"image": "https://backend.emmagini.com/uploads/preguntas//BB53095F-0987-4CEF-AE66-DB15D92F171E.png",
 				"link": "https://gamaleasing.cl/?utm_source=google&utm_medium=cpc&utm_campaign=lop-search&campaignid=8793069832&adgroupid=88869084215&adid=658209210436&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNX36KQvVLEkeQ2zeNl8b7An5oys_i5BRWl7-sqHRiVAHyYxhJ9cJMaAtIPEALw_wcB",
 				"options": [
 					{
@@ -31,8 +31,8 @@
 			{
 				"id": "p2",
 				"question": "Este guiso lleva papas, queso y huevo duro, y es una delicia peruana. ¿Cuál es?",
-				"image": "https://backend.emmagini.com/uploads/preguntas/66ddb965-3ba7-11ef-b964-fa163ef884a2.png",
-				"link": "https://iclick.travel/",
+				"image": "https://backend.emmagini.com/uploads/preguntas//B4000CA2-44B8-42C7-A075-15EFE0BAB5C5.jpeg",
+				"link": "https://www.ecopter.cl/",
 				"options": [
 					{
 						"id": "a2",
@@ -54,7 +54,7 @@
 			{
 				"id": "p3",
 				"question": "Este plato brasileño es un guiso de frijoles negros con carne de cerdo y arroz. ¿Qué nombre tiene?",
-				"image": "https://backend.emmagini.com/uploads/preguntas/8c461e9b-8035-11ef-bfca-fa163ef884a2.jpeg",
+				"image": "https://backend.emmagini.com/uploads/preguntas//623D52BA-E4F1-48B1-B764-12D9D629ED5E.png",
 				"link": "https://www.marriott.com/es/hotels/smrmc-santa-marta-marriott-resort-playa-dormida/overview/?cid=DIS_GLB0005VI0_GLE000DQ71_GLF000VBHX",
 				"options": [
 					{
@@ -77,7 +77,7 @@
 			{
 				"id": "p4",
 				"question": "¿Qué plato ecuatoriano se elabora con plátano verde, carne y especias, y se cocina en hojas de plátano?",
-				"image": "https://backend.emmagini.com/uploads/preguntas/7133089b-8038-11ef-bfca-fa163ef884a2.png",
+				"image": "https://backend.emmagini.com/uploads/preguntas//3F821EAB-608B-4D5E-A32A-FFCE890F4195.png",
 				"link": "https://ticketmaster.cl/",
 				"options": [
 					{
@@ -100,7 +100,7 @@
 			{
 				"id": "p5",
 				"question": "Este popular plato relleno de carne y azúcar proviene de Chile. ¿Cómo se llama?",
-				"image": "https://backend.emmagini.com/uploads/preguntas/c8cc070f-8037-11ef-bfca-fa163ef884a2.png",
+				"image": "https://backend.emmagini.com/uploads/preguntas//7917A466-48EB-4898-A82C-25F926E81947.jpeg",
 				"link": "www.reservategualda.cl",
 				"options": [
 					{
@@ -123,8 +123,8 @@
 			{
 				"id": "p6",
 				"question": "¿Cómo se llama el guiso paraguayo de harina de maíz, queso, cebolla y huevos?",
-				"image": "https://backend.emmagini.com/uploads/preguntas/c8cc070f-8037-11ef-bfca-fa163ef884a2.png",
-				"link": "www.reservategualda.cl",
+				"image": "https://backend.emmagini.com/uploads/preguntas//1857E824-39E7-4674-AE6F-3D485AAB8DC2.jpeg",
+				"link": "https://www.bciseguros.cl/",
 				"options": [
 					{
 						"id": "a6",
@@ -146,8 +146,8 @@
 			{
 				"id": "p7",
 				"question": "Este postre argentino es una masa fina rellena de dulce de leche y, muchas veces, cubierto con chocolate. ¿Qué nombre tiene?",
-				"image": "https://backend.emmagini.com/uploads/preguntas/c8cc070f-8037-11ef-bfca-fa163ef884a2.png",
-				"link": "www.reservategualda.cl",
+				"image": "https://backend.emmagini.com/uploads/preguntas//BB53095F-0987-4CEF-AE66-DB15D92F171E.png",
+				"link": "https://gamaleasing.cl/?utm_source=google&utm_medium=cpc&utm_campaign=lop-search&campaignid=8793069832&adgroupid=88869084215&adid=658209210436&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNX36KQvVLEkeQ2zeNl8b7An5oys_i5BRWl7-sqHRiVAHyYxhJ9cJMaAtIPEALw_wcB",
 				"options": [
 					{
 						"id": "a7",
