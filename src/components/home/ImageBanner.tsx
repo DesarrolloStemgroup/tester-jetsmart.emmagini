@@ -26,7 +26,7 @@ export const ImageBanner = ({
 	const router = useRouter();
 	const { language } = useDataContext();
 
-	const idTrivia = "64776728-d5a0-11ee-a304-111c596b0bf7";
+	//const idTrivia = "64776728-d5a0-11ee-a304-111c596b0bf7";
 
 	const handleButtonTriviaClick = () => {
 		router.push(`/${language}/trivia`);

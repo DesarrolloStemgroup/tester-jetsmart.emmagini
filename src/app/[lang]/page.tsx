@@ -6,13 +6,12 @@ import { useRouter } from "next/navigation";
 import { useDataContext } from "@/context/DataProvider";
 import withAuth from "../withAuth";
 import NavBar from "@/components/home/NavBar";
-import ImageBanner from "../../components/home/ImageBanner";
 import Table from "@/components/home/Table";
 import ButtonNav from "@/components/home/ButtonNav";
-import "@/styles/styles.css";
-import banner from "../../../public/assets/banner.jpeg";
+import banner from "../../../public/assets/banner.png";
 import bannerChile from "../../../public/assets/banner-chile.png";
 import bannerArgentina from "../../../public/assets/banner-argentina.png";
+import "@/styles/styles.css";
 
 function Home() {
 	const { data, empresa, language } = useDataContext();
@@ -47,7 +46,7 @@ function Home() {
 					<div className="mt-20 w-full relative">
 						<div className="relative w-full lg:max-h-[600px]">
 							<Image
-								src={language === "es-la" ? bannerChile : bannerArgentina}
+								src={language === "es-la" ? banner : banner}
 								alt="Banner"
 								className="w-full h-auto object-cover"
 							/>
