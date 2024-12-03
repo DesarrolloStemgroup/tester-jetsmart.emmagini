@@ -127,11 +127,12 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 					{quizFinished ? (
 						<div className="flex flex-col items-center lg:mt-20">
 							<p className="text-base md:text-xl text-center  md:mb-6 lg:mt-10 font-bold">
-								Ya estás participando!
+								Ya CASI estás participando!
 							</p>
 							<p className=" text-base md:text-lg">
 								{" "}
-								<br></br>Te invitamos a seguirnos en Instagram:{" "}
+								<br></br>¡Solamente debes seguir los pasos en la publicación del
+								concurso en nuestra cuenta de instagram!:{" "}
 							</p>
 							<Link
 								href="https://www.instagram.com/deviajetravel"
@@ -142,7 +143,7 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 								<span className="text-base md:text-xl">@deviajetravel</span>
 							</Link>
 							<br></br>
-							para conocer al ganador!
+							¡Donde además podrás conocer al ganador!
 							<h2 className=" text-base md:text-xl text-center mb-4 font-bold md:mt-6">
 								Resultados
 							</h2>
