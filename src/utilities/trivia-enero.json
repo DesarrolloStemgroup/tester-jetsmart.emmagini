@@ -1,0 +1,148 @@
+{
+	"trivia enero": {
+		"title": "El aterrizaje de la cultura",
+		"description": "Personajes famosos: trivia sobre artistas, escritores y otros personajes destacados de la región.",
+		"image": "https://backend.emmagini.com/uploads/landing/19e3788af25888101abe2a68d64ad8a5/D11EDCD5-1844-4178-9D68-B746F6F22121.jpeg",
+		"id": "enero",
+		"questions": [
+			{
+				"id": "p1",
+				"question": "¿Quién es el autor de \"Cien años de soledad\", una de las novelas más emblemáticas de la literatura mundial?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//BB53095F-0987-4CEF-AE66-DB15D92F171E.png",
+				"link": "https://gamaleasing.cl/?utm_source=google&utm_medium=cpc&utm_campaign=lop-search&campaignid=8793069832&adgroupid=88869084215&adid=658209210436&gad_source=1&gclid=Cj0KCQjww5u2BhDeARIsALBuLnNX36KQvVLEkeQ2zeNl8b7An5oys_i5BRWl7-sqHRiVAHyYxhJ9cJMaAtIPEALw_wcB",
+				"options": [
+					{
+						"id": "a1",
+						"text": "Pablo Neruda.",
+						"correct": false
+					},
+					{
+						"id": "b1",
+						"text": "Gabriel García Márquez.",
+						"correct": true
+					},
+					{
+						"id": "c1",
+						"text": "Jorge Luis Borges.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p2",
+				"question": "¿Qué compositora chilena se convirtió en una leyenda de la música folclórica con canciones como \"Gracias a la vida\"?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//B4000CA2-44B8-42C7-A075-15EFE0BAB5C5.jpeg",
+				"link": "https://www.ecopter.cl/",
+				"options": [
+					{
+						"id": "a2",
+						"text": "Mercedes Sosa.",
+						"correct": false
+					},
+					{
+						"id": "b2",
+						"text": "Soledad Pastorutti.",
+						"correct": false
+					},
+					{
+						"id": "c2",
+						"text": "Violeta Parra.",
+						"correct": true
+					}
+				]
+			},
+			{
+				"id": "p3",
+				"question": "¿Qué futbolista brasileño es conocido como \"O Rei\" del fútbol y ganó tres Copas del Mundo?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//623D52BA-E4F1-48B1-B764-12D9D629ED5E.png",
+				"link": "https://www.marriott.com/es/hotels/smrmc-santa-marta-marriott-resort-playa-dormida/overview/?cid=DIS_GLB0005VI0_GLE000DQ71_GLF000VBHX",
+				"options": [
+					{
+						"id": "a3",
+						"text": "Pelé.",
+						"correct": true
+					},
+					{
+						"id": "b3",
+						"text": "Garrincha.",
+						"correct": false
+					},
+					{
+						"id": "c3",
+						"text": "Zico.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p4",
+				"question": "¿Qué uruguayo es reconocido como uno de los mejores poetas de habla hispana y escribió \"El amor, las mujeres y la vida\"?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//3F821EAB-608B-4D5E-A32A-FFCE890F4195.png",
+				"link": "https://ticketmaster.cl/",
+				"options": [
+					{
+						"id": "a4",
+						"text": "Eduardo Galeano.",
+						"correct": false
+					},
+					{
+						"id": "b4",
+						"text": "Mario Benedetti.",
+						"correct": true
+					},
+					{
+						"id": "c4",
+						"text": "Horacio Quiroga.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p5",
+				"question": "¿Qué escritor peruano ganó el Premio Nobel de Literatura en 2010?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//7917A466-48EB-4898-A82C-25F926E81947.jpeg",
+				"link": "www.reservategualda.cl",
+				"options": [
+					{
+						"id": "a5",
+						"text": "Mario Vargas Llosa.",
+						"correct": true
+					},
+					{
+						"id": "b5",
+						"text": "César Vallejo.",
+						"correct": false
+					},
+					{
+						"id": "c5",
+						"text": "Alfredo Bryce Echenique.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p6",
+				"question": "¿Cuál es el nombre de una destacada cineasta chilena que ha sido distinguida con dos nominaciones a los Oscar y con un galardón en los Goya?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//1857E824-39E7-4674-AE6F-3D485AAB8DC2.jpeg",
+				"link": "https://www.bciseguros.cl/",
+				"options": [
+					{
+						"id": "a6",
+						"text": "Lucrecia Martel.",
+						"correct": false
+					},
+					{
+						"id": "b6",
+						"text": "Marta Rodríguez.",
+						"correct": false
+					},
+					{
+						"id": "c6",
+						"text": "Maite Alberdi.",
+						"correct": true
+					}
+				]
+			}
+		]
+	}
+}
