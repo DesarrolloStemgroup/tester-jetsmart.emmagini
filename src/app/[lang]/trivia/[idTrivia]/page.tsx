@@ -15,6 +15,7 @@ import triviaOctubre from "@/utilities/trivia-octubre.json";
 import triviaNoviembre from "@/utilities/trivia-noviembre.json";
 import triviaDiciembre from "@/utilities/trivia-diciembre.json";
 import triviaEnero from "@/utilities/trivia-enero.json";
+import triviaFebrero from "@/utilities/trivia-febrero.json";
 import { FaInstagram } from "react-icons/fa";
 import "@/styles/styles.css";
 
@@ -48,6 +49,7 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 			noviembre: triviaNoviembre["trivia noviembre"],
 			diciembre: triviaDiciembre["trivia diciembre"],
 			enero: triviaEnero["trivia enero"],
+			febrero: triviaFebrero["trivia febrero"],
 		};
 
 		const selectedTrivia = triviaMap[idTrivia];
