@@ -8,7 +8,6 @@ import withAuth from "../withAuth";
 import NavBar from "@/components/home/NavBar";
 import Table from "@/components/home/Table";
 import ButtonNav from "@/components/home/ButtonNav";
-import banner from "../../../public/assets/banner.png";
 import bannerChile from "../../../public/assets/banner-chile.png";
 import bannerArgentina from "../../../public/assets/banner-argentina.png";
 import "@/styles/styles.css";

@@ -1,0 +1,125 @@
+{
+	"trivia marzo": {
+		"title": "El aterrizaje de la cultura",
+		"description": "Nuestra región es hogar de algunos de los volcanes más imponentes y activos del mundo. Desde los Andes hasta el Amazonas, estos gigantes marcan el paisaje y la historia del continente. En la trivia de hoy, queremos poner a prueba tus conocimientos sobre ellos, con datos que te dejarán sin palabras.",
+		"image": "https://backend.emmagini.com/uploads/preguntas//6565E19B-044C-4377-8E0A-71F6D84FDDEC.jpeg",
+		"id": "marzo",
+		"questions": [
+			{
+				"id": "p1",
+				"question": "¿Cuál es el volcán más alto de Sudamérica?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//003CAE42-B006-4C5F-A43F-ECAF680405A1.png",
+				"link": "https://www.gamarent.cl/",
+				"options": [
+					{
+						"id": "a1",
+						"text": "Tungurahua, Ecuador.",
+						"correct": false
+					},
+					{
+						"id": "b1",
+						"text": "Nevado Ojos del Salado, entre Chile y Argentina.",
+						"correct": true
+					},
+					{
+						"id": "c1",
+						"text": "El Nevado del Ruiz, Colombia.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p2",
+				"question": "¿En qué país se encuentra el volcán Cotopaxi, uno de los más activos de la región?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//E68257FC-95D4-4B74-99D1-B4FC7B7A4E6B.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a2",
+						"text": "Ecuador.",
+						"correct": true
+					},
+					{
+						"id": "b2",
+						"text": "Perú.",
+						"correct": false
+					},
+					{
+						"id": "c2",
+						"text": "Colombia.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p3",
+				"question": "¿Cuál de estos países de Sudamérica no tiene volcanes activos hoy?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//6569DEDF-2183-4C13-92B7-34472F906DF4.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a3",
+						"text": "Perú.",
+						"correct": false
+					},
+					{
+						"id": "b3",
+						"text": "Argentina.",
+						"correct": false
+					},
+					{
+						"id": "c3",
+						"text": "Uruguay.",
+						"correct": true
+					}
+				]
+			},
+			{
+				"id": "p4",
+				"question": "¿Cuál de estos tres volcanes ha tenido erupciones en el siglo XXI?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//EBFCFBDC-1A31-44D7-89A7-8CF4929C81E9.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a4",
+						"text": "Ubinas, Perú.",
+						"correct": true
+					},
+					{
+						"id": "b4",
+						"text": "Maipo, Chile-Argentina.",
+						"correct": false
+					},
+					{
+						"id": "c4",
+						"text": "Lanín, Chile.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p5",
+				"question": "¿Cuál es el país de Sudamérica con más volcanes en el mundo?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//1A5065B4-3D74-4B6D-AB69-E08588180F43.png",
+				"link": "www.reservategualda.cl",
+				"options": [
+					{
+						"id": "a5",
+						"text": "Perú.",
+						"correct": false
+					},
+					{
+						"id": "b5",
+						"text": "Argentina.",
+						"correct": false
+					},
+					{
+						"id": "c5",
+						"text": "Chile.",
+						"correct": true
+					}
+				]
+			}
+		]
+	}
+}

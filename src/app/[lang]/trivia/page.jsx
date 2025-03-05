@@ -7,7 +7,6 @@ import NavBar from "@/components/home/NavBar";
 import CardTrivia from "@/components/cards/CardTrivia";
 import ButtonNav from "@/components/home/ButtonNav";
 import WhileTap from "@/components/animations/WhileTap";
-import "@/styles/styles.css";
 import triviaJulio from "@/utilities/trivia-julio.json";
 import triviaAgosto from "@/utilities/trivia-agosto.json";
 import triviaSeptiembre from "@/utilities/trivia-septiembre.json";
@@ -16,6 +15,9 @@ import triviaNoviembre from "@/utilities/trivia-noviembre.json";
 import triviaDiciembre from "@/utilities/trivia-diciembre.json";
 import triviaEnero from "@/utilities/trivia-enero.json";
 import triviaFebrero from "@/utilities/trivia-febrero.json";
+import triviaMarzo from "@/utilities/trivia-marzo.json";
+import portadaMarzo from "../../../../public/assets/portada-marzo.jpeg";
+import "@/styles/styles.css";
 
 function Page() {
 	const { landing, empresa } = useDataContext();
@@ -69,6 +71,12 @@ function Page() {
 			image: triviaFebrero["trivia febrero"].image,
 			id: triviaFebrero["trivia febrero"].id,
 			description: triviaFebrero["trivia febrero"].description,
+		},
+		{
+			title: triviaMarzo["trivia marzo"].title,
+			image: triviaMarzo["trivia marzo"].image,
+			id: triviaMarzo["trivia marzo"].id,
+			description: triviaMarzo["trivia marzo"].description,
 		},
 	];
 
