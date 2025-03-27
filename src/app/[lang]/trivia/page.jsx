@@ -16,7 +16,7 @@ import triviaDiciembre from "@/utilities/trivia-diciembre.json";
 import triviaEnero from "@/utilities/trivia-enero.json";
 import triviaFebrero from "@/utilities/trivia-febrero.json";
 import triviaMarzo from "@/utilities/trivia-marzo.json";
-import portadaMarzo from "../../../../public/assets/portada-marzo.jpeg";
+import triviaAbril from "@/utilities/trivia-abril.json";
 import "@/styles/styles.css";
 
 function Page() {
@@ -77,6 +77,12 @@ function Page() {
 			image: triviaMarzo["trivia marzo"].image,
 			id: triviaMarzo["trivia marzo"].id,
 			description: triviaMarzo["trivia marzo"].description,
+		},
+		{
+			title: triviaAbril["trivia abril"].title,
+			image: triviaAbril["trivia abril"].image,
+			id: triviaAbril["trivia abril"].id,
+			description: triviaAbril["trivia abril"].description,
 		},
 	];
 

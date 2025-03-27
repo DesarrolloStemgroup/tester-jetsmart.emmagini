@@ -1,0 +1,171 @@
+{
+	"trivia abril": {
+		"title": "Descubre los secretos de la Patagonia: datos curiosos sobre la región.",
+		"description": "Hoy queremos saber cuánto sabes sobre esta región única: la Patagonia. Compartida entre Chile y Argentina, es una tierra de paisajes imponentes, tradiciones únicas y rincones llenos de historia. Desde glaciares milenarios hasta platos típicos, queremos que pongas a prueba tus conocimientos con esta trivia y así descubras los secretos mejor guardados del fin del mundo.",
+		"image": "https://backend.emmagini.com/uploads/preguntas//BB60A245-A7DB-45E3-B3DE-D3DB32ED9BB9.jpeg",
+		"id": "abril",
+		"questions": [
+			{
+				"id": "p1",
+				"question": "¿Cuál es el glaciar más famoso de la Patagonia argentina?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//0FD53787-5FEF-43E6-B79B-AD73B2A4B4FF.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a1",
+						"text": "Glaciar Grey.",
+						"correct": false
+					},
+					{
+						"id": "b1",
+						"text": " Glaciar Perito Moreno.",
+						"correct": true
+					},
+					{
+						"id": "c1",
+						"text": "Glaciar Viedma.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p2",
+				"question": "¿Cuál es el plato típico patagónico más representativo?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//9617053D-9FEB-433E-B9F9-82CF3C6AAE62.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a2",
+						"text": "Cordero al palo.",
+						"correct": true
+					},
+					{
+						"id": "b2",
+						"text": "Curanto.",
+						"correct": false
+					},
+					{
+						"id": "c2",
+						"text": "Sopaipillas con pebre.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p3",
+				"question": "¿Qué parque nacional de la Patagonia chilena es considerado uno de los más hermosos del mundo y conocido como la octava maravilla del mundo?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//7E5E429D-D5F0-4652-9899-BDC2F5CAAE75.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a3",
+						"text": "Parque Nacional Queulat.",
+						"correct": false
+					},
+					{
+						"id": "b3",
+						"text": "Parque Nacional Pumalín.",
+						"correct": false
+					},
+					{
+						"id": "c3",
+						"text": "Parque Nacional Torres del Paine.",
+						"correct": true
+					}
+				]
+			},
+			{
+				"id": "p4",
+				"question": "¿Cuál es la ciudad más austral del mundo, ubicada en la Patagonia?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//D4933D05-D639-4023-AC10-A67DA741DEFA.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a4",
+						"text": "Ushuaia.",
+						"correct": false
+					},
+					{
+						"id": "b4",
+						"text": "Puerto Williams.",
+						"correct": true
+					},
+					{
+						"id": "c4",
+						"text": "Punta Arenas.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p5",
+				"question": "¿Qué tradicional infusión caliente es una costumbre arraigada en toda la Patagonia?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//BE7F982D-8B2C-4892-950D-DADD718C118A.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a5",
+						"text": "Mate.",
+						"correct": true
+					},
+					{
+						"id": "b5",
+						"text": "Café de trigo.",
+						"correct": false
+					},
+					{
+						"id": "c5",
+						"text": "Té de paramela.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p6",
+				"question": "¿Qué mítica criatura es parte del folclore patagónico y se dice que habita en los lagos de la región?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//0FD53787-5FEF-43E6-B79B-AD73B2A4B4FF.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a6",
+						"text": "El Nahuelito.",
+						"correct": true
+					},
+					{
+						"id": "b6",
+						"text": "El Chupacabras.",
+						"correct": false
+					},
+					{
+						"id": "c6",
+						"text": "El Alicanto.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p7",
+				"question": "¿Qué animal es uno de los símbolos de la fauna patagónica y es el primo sudamericano del camello?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//D4933D05-D639-4023-AC10-A67DA741DEFA.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a7",
+						"text": "El huemul.",
+						"correct": false
+					},
+					{
+						"id": "b7",
+						"text": "El cóndor.",
+						"correct": false
+					},
+					{
+						"id": "c7",
+						"text": "El guanaco.",
+						"correct": true
+					}
+				]
+			}
+		]
+	}
+}

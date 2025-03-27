@@ -17,6 +17,7 @@ import triviaDiciembre from "@/utilities/trivia-diciembre.json";
 import triviaEnero from "@/utilities/trivia-enero.json";
 import triviaFebrero from "@/utilities/trivia-febrero.json";
 import triviaMarzo from "@/utilities/trivia-marzo.json";
+import triviaAbril from "@/utilities/trivia-abril.json";
 import { FaInstagram } from "react-icons/fa";
 import "@/styles/styles.css";
 
@@ -52,6 +53,7 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 			enero: triviaEnero["trivia enero"],
 			febrero: triviaFebrero["trivia febrero"],
 			marzo: triviaMarzo["trivia marzo"],
+			abril: triviaAbril["trivia abril"],
 		};
 
 		const selectedTrivia = triviaMap[idTrivia];
@@ -123,8 +125,8 @@ function Trivia({ params: { lang, idTrivia } }: ComponentProps) {
 						<Image
 							src={currentQuestion.image}
 							alt="Pregunta"
-							className="mx-auto max-h-[550px]"
-							width={500}
+							className="mx-auto max-h-[650px]"
+							width={600}
 							height={600}
 						/>
 					</Link>
