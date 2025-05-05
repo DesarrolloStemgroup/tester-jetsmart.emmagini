@@ -1,0 +1,171 @@
+{
+	"trivia mayo": {
+		"title": "¿De dónde vienen los nombres de estas ciudades sudamericanas?",
+		"description": "¿Alguna vez te has preguntado por qué Montevideo se llama así? ¿O cuál es la historia detrás de la palabra “Ushuaia”? Probablemente, la mayoría no conoce el “detrás” de los nombres de las ciudades sudamericanas, así que siéntate y disfruta de esta entretenida trivia para poner a prueba tus conocimientos sobre la región.",
+		"image": "https://backend.emmagini.com/uploads/preguntas//82B496F2-96F5-4642-815C-A011355051E6.jpeg",
+		"id": "mayo",
+		"questions": [
+			{
+				"id": "p1",
+				"question": "¿De dónde proviene la denominación “Guayaquil” para esta ciudad de Ecuador?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//394493B0-E390-4BE5-9B69-A5B5CFD61D1E.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a1",
+						"text": "Proviene del término quechua \"Guayakil\", que significa \"gran río\".",
+						"correct": false
+					},
+					{
+						"id": "b1",
+						"text": "Es la combinación de los nombres de un cacique indígena y su esposa.",
+						"correct": true
+					},
+					{
+						"id": "c1",
+						"text": "Se llama así en honor a la abundancia de guayabas en la región.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p2",
+				"question": "¿Por qué Río de Janeiro tiene esa denominación?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//CE45C0E2-7813-434D-99C3-2C4635CA05CE.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a2",
+						"text": "Los portugueses creyeron que la bahía de Guanabara era la desembocadura de un río.",
+						"correct": true
+					},
+					{
+						"id": "b2",
+						"text": "Fue nombrada así por un explorador portugués llamado Janeiro.",
+						"correct": false
+					},
+					{
+						"id": "c2",
+						"text": "Su nombre en tupí significa \"río del paraíso\".",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p3",
+				"question": "¿Qué significa “Ushuaia”?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//FC1530BB-0F1C-4073-9E6F-7BD346D6A20E.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a3",
+						"text": "\"Fin del mundo\" en mapudungún.",
+						"correct": false
+					},
+					{
+						"id": "b3",
+						"text": "\"Bahía profunda\" en lengua yagán.",
+						"correct": true
+					},
+					{
+						"id": "c3",
+						"text": "\"Lugar de nieves eternas\" en quechua.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p4",
+				"question": "¿De dónde proviene el nombre “Santiago de Chile”?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//394493B0-E390-4BE5-9B69-A5B5CFD61D1E.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a4",
+						"text": "Del cerro Santa Lucía, porque tenía una forma similar al de la ciudad de Santiago de Compostela.",
+						"correct": false
+					},
+					{
+						"id": "b4",
+						"text": "En reconocimiento a un capitán español llamado Santiago.",
+						"correct": false
+					},
+					{
+						"id": "c4",
+						"text": "En honor al apóstol Santiago, patrono de España.",
+						"correct": true
+					}
+				]
+			},
+			{
+				"id": "p5",
+				"question": "¿Por qué la ciudad de Asunción en Paraguay se llama así?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//CE45C0E2-7813-434D-99C3-2C4635CA05CE.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a5",
+						"text": " Porque fue fundada un 15 de agosto, día de la Asunción de la Virgen.",
+						"correct": true
+					},
+					{
+						"id": "b5",
+						"text": "En honor a un cacique guaraní llamado Asun.",
+						"correct": false
+					},
+					{
+						"id": "c5",
+						"text": " Porque los conquistadores la consideraron un \"ascenso\" en su viaje por el río Paraguay.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p6",
+				"question": "¿Cuál es el origen del nombre de Lima, la capital de Perú?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//FC1530BB-0F1C-4073-9E6F-7BD346D6A20E.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a6",
+						"text": "Proviene del río Rímac, cuyo nombre fue mal pronunciado por los españoles.",
+						"correct": true
+					},
+					{
+						"id": "b6",
+						"text": "Deriva de \"Limaq\", que en quechua significa \"flor dorada\".",
+						"correct": false
+					},
+					{
+						"id": "c6",
+						"text": "Fue bautizada así por Francisco Pizarro en honor a su ciudad natal.",
+						"correct": false
+					}
+				]
+			},
+			{
+				"id": "p7",
+				"question": "¿Cuál es el origen del nombre “Montevideo”, Uruguay?",
+				"image": "https://backend.emmagini.com/uploads/preguntas//394493B0-E390-4BE5-9B69-A5B5CFD61D1E.png",
+				"link": "",
+				"options": [
+					{
+						"id": "a7",
+						"text": "Deriva de una frase portuguesa que describe un monte visible desde el mar.",
+						"correct": true
+					},
+					{
+						"id": "b7",
+						"text": "Es la combinación de \"monte\" y \"vida\", en referencia a la fertilidad del terreno.",
+						"correct": false
+					},
+					{
+						"id": "c7",
+						"text": "Proviene del latín \"Mons Video\", que significa \"Monte Visto\".",
+						"correct": false
+					}
+				]
+			}
+		]
+	}
+}
